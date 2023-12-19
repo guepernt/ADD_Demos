@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer
+vRNG
+!s110 1678174234
+!i10b 1
+!s100 Vlkz<H>]NHz@b`FMdeI0o1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImkBBAmj8f:TYZfLSWz10`2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Lab3_ZHANG_David/sim_rng
+w1678174180
+8D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\RNG.v
+FD:\ADD_Demos\Lab3_ZHANG_David\sim_rng\RNG.v
+!i122 4
+L0 10 15
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1678174234.000000
+!s107 D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\RNG.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\RNG.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@r@n@g
+vtb_RNG
+!s110 1678355287
+!i10b 1
+!s100 >4EZzQfHMBFcX^?BW^`kZ1
+R0
+IBga^JMog3OJPLimVUcL0V3
+R1
+R2
+w1678355179
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_rng/tb_RNG.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_rng/tb_RNG.v
+!i122 6
+L0 9 44
+R3
+r1
+!s85 0
+31
+!s108 1678355287.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_rng/tb_RNG.v|
+!s90 -reportprogress|300|-work|work|D:/ADD_Demos/Lab3_ZHANG_David/sim_rng/tb_RNG.v|
+!i113 1
+R4
+R5
+ntb_@r@n@g
+Xtb_RNG_v_unit
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1677659369
+VhBV@NCHBL0_kDci=Ii?b]1
+r1
+!s85 0
+!i10b 1
+!s100 1?4];hMdU9]<4g94?1X7^1
+IhBV@NCHBL0_kDci=Ii?b]1
+!i103 1
+S1
+R2
+w1677659364
+8D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\tb_RNG.v
+FD:\ADD_Demos\Lab3_ZHANG_David\sim_rng\tb_RNG.v
+!i122 2
+L0 8 0
+R3
+31
+!s108 1677659369.000000
+!s107 D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\tb_RNG.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\tb_RNG.v|
+!i113 1
+R4
+R5
+ntb_@r@n@g_v_unit

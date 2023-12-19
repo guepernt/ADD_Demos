@@ -1,0 +1,41 @@
+Quartus Prime Archive log --	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qarlog
+
+Archive:	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qar
+Date:		Fri Feb 03 23:02:18 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/ADD_Demos/Lab1_ZHANG_David/Lab1_ZHANG_David.v
+D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v
+D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/Adder4Bit.v
+D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qpf
+D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qsf
+d:/intelfpga/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Feb 03 23:09:28 2023
+Source archive file:	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qar
+Archive was extracted into	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Fri Feb 03 23:18:43 2023
+Source archive file:	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qar
+Archive was extracted into	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Fri Feb 03 23:19:14 2023
+Source archive file:	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qar
+Archive was extracted into	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon Feb 06 00:47:07 2023
+Source archive file:	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David.qar
+Archive was extracted into	D:/ADD_Demos/Lab1_ZHANG_David/syn/Lab1_ZHANG_David_restored/
+		 - successfully.

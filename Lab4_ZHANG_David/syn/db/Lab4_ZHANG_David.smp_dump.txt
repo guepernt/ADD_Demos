@@ -1,0 +1,32 @@
+
+State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|State
+Name State.VERIFY State.DIGIT State.OPERATIONAL 
+State.DIGIT 0 0 0 
+State.VERIFY 1 1 0 
+State.OPERATIONAL 0 1 1 
+
+State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER|State
+Name State.RECONFIG_TIMER State.GAMEOVER State.GAMEINPROGRESS State.PREGAMESTART State.WAIT 
+State.WAIT 0 0 0 0 0 
+State.PREGAMESTART 0 0 0 1 1 
+State.GAMEINPROGRESS 0 0 1 0 1 
+State.GAMEOVER 0 1 0 0 1 
+State.RECONFIG_TIMER 1 0 0 0 1 
+
+State Machine - |Lab4_ZHANG_David|ButtonShaper:BSC|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |Lab4_ZHANG_David|ButtonShaper:BSP|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |Lab4_ZHANG_David|ButtonShaper:BS1|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 

@@ -1,0 +1,54 @@
+//ECE 6370
+//David Zhang, 2213233
+//Digit Timer Module
+
+//This module defines the operation of the Digit Timers, which are responsible for displaying the amount of time
+//left as a timer. These modules are non-digit specific and thus can be instantiated in any place and linked 
+//together to provide correct operation. They take in an active high signal to decrement their internal counter
+//until it reaches 0, at which point it will borrow from its left neighbor until it is no longer possible. 
+
+module digitTimer (DecrementD, DecrementU, noBorrowU, noBorrowD, reconfig, numOut, clk, rst);
+	input DecrementD, noBorrowU, reconfig, clk, rst;
+	output DecrementU, noBorrowD;
+	output [3:0] numOut;
+
+	reg DecrementU, noBorrowD;		//Outgoing signals to decrement Upstream, or tell right neighbor
+	reg [3:0] numOut;			//that noBorrow possible.
+	
+	always @(posedge clk) begin
+		if (rst == 1'b0) begin		//Standard reset block. 
+			noBorrowD <= 0;
+			numOut <= 0;
+			DecrementU <= 0;
+		end
+		if (reconfig == 1'b1) begin
+			numOut <= 4'b1001;	//Load 9 in when reconfig. 
+			noBorrowD <= 0;		//"I can now lend numbers to my rightmost neighbor"
+			DecrementU <= 0;
+		end
+		else if (DecrementD == 1'b1) begin	//If downstream requests decrement...
+			if (numOut == 1'b0) begin	//Check if internal number is 0. 
+				if (noBorrowU == 1'b0) begin	//If it is 0, see if I can borrow from upstream
+					numOut <= 4'b1001;
+					DecrementU <= 1'b1;	//If you can borrow, tell upstream and reset self back to 9.
+				end
+				else begin			//Cannot borrow from upstream, and I am at 0. Tell my right neighbor that I cannot lend. 
+					noBorrowD <= 1'b1;
+				end
+				
+			end
+			else begin
+				numOut <= numOut - 1'b1;//If internal is not 0, decrement by 1. 
+				DecrementU <= 1'b0;
+			end
+		end
+		else if (DecrementD == 1'b0) begin
+			DecrementU <= 1'b0;		//While just chilling, make sure you are not requesting from upstream neighbor. 
+			if (noBorrowU == 1'b1) begin
+				if (numOut == 1'b0) begin
+					noBorrowD <= 1'b1;	//Same condition as above (cannot borrow and at zero) just done during downtime. 
+				end
+			end
+		end
+	end
+endmodule

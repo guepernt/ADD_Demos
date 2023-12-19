@@ -1,0 +1,43 @@
+//ECE 6370
+//David Zhang, 2213233
+
+//This module defines the testbench for comparing the 1s LFSR with the original 1 second timer. It borrows
+//much of the code from the 1secondTimer testbench and instantiates the LFSR alongside the original. After
+//matching the equivalent 1 second point in the original to the LFSR, this testbench sees whether the output
+//behaviour is identical or not. 
+
+`timescale 1 ns/100 ps
+module tb_1secTimer();
+	reg rst, clk, enable;
+	wire count_binary, count_LFSR;
+	oneSecondTimer DUT(clk, rst, enable, count_binary);
+	oneSecondLFSR LSFR(clk, rst, enable, count_LFSR);
+	always
+		begin	
+			clk = 1'b0;
+			#10;
+			clk = 1'b1;
+			#10;
+		end 
+
+	initial
+	begin
+		rst = 1'b1;
+		enable = 1'b0;
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b0;
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b1;
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);	//Multiple clock cycles later to make sure it doesn't turn on
+		@(posedge clk);	//without enable signal.
+		@(posedge clk);
+		#5 enable = 1'b1;	//Just leave enable on indefinitely since we are just looking for
+					//proof of correct counting.
+	end		
+
+endmodule

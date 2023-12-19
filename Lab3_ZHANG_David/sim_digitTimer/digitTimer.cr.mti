@@ -1,0 +1,36 @@
+D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module oneSecondTimer
+
+Top level modules:
+	oneSecondTimer
+
+} {} {}} D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module countTo10
+
+Top level modules:
+	countTo10
+
+} {} {}} D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module countTo100
+
+Top level modules:
+	countTo100
+
+} {} {}} D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module digitTimer
+
+Top level modules:
+	digitTimer
+
+} {} {}} D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_digitTimer
+
+Top level modules:
+	tb_digitTimer
+
+} {} {}}

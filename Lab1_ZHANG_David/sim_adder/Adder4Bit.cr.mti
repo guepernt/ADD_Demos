@@ -1,0 +1,18 @@
+D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/tb_adder4bit.v {2 {vlog -work work -stats=none D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/tb_adder4bit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Warning: D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/tb_adder4bit.v(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/tb_adder4bit.v(19): (vlog-2284) Empty $unit scope found.
+-- Compiling package tb_adder4bit_v_unit
+-- Compiling module tb_adder4bit
+
+Top level modules:
+	tb_adder4bit
+
+} {} {}} D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/Adder4Bit.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab1_ZHANG_David/sim_adder/Adder4Bit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder4Bit
+
+Top level modules:
+	Adder4Bit
+
+} {} {}}

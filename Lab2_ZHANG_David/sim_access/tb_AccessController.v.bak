@@ -1,0 +1,189 @@
+//ECE 6370
+//David Zhang, 3233
+//Access Controller Testbench
+//
+//This module defines the testbench used for the access controller module for the mental binary game. It tests the 
+//important conditions as well as cases, particularly that the login feature works correctly. 
+`timescale 1 ns/100 ps
+module tb_AccessController();
+	reg p1Button, p2Button, passButton;
+	reg [3:0] p2In;
+	reg rst, clk;
+
+	wire loggedIn_s, loggedOut_s;
+	wire p1loadOut_s, p2loadOut_s;
+	
+	always
+		begin	
+			clk = 1'b0;
+			#10;
+			clk = 1'b1;
+			#10;
+		end 
+
+	ButtonShaper BS1(p1Button, p1loadIn_s, rst, clk);//Instantiation of all 3 button shapers for use with buttons. 
+	ButtonShaper BS2(p2Button, p2loadIn_s, rst, clk);
+	ButtonShaper BSP(passButton, passButton_s, rst, clk);
+	AccessController DUT_AC(p2In, passButton_s, loggedIn_s, loggedOut_s, p1loadIn_s, p2loadIn_s, p1loadOut_s,
+				p2loadOut_s, rst, clk);
+	initial
+	begin
+		rst = 1'b1;		//Setting of all initial conditions.
+		p1Button = 1'b1;
+		p2Button = 1'b1;
+		passButton = 1'b1;
+		p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b1;		//Reset pushed. Operation starts.
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		
+		#5 p2In = 4'b1111;
+		p1Button = 1'b0; 	//Player 2 input while Player 1 presses button. Signal out should not change.
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		p1Button = 1'b1; 	//Multiple cycles later to make sure that ButtonShaper works correctly. 
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		
+		#5 p2In = 4'b1111;
+		p2Button = 1'b0; 	//Player 2 input while Player 2 presses button. Signal out should not change.
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		p2Button = 1'b1; 	//Multiple cycles later to make sure that ButtonShaper works correctly. 
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		
+		#5 p2In = 4'b0010;	//Intentionally wrong first input to make sure that state still advances, but 
+		@(posedge clk);		//marks as wrong. 
+		@(posedge clk);
+		#5 passButton = 1'b0; 	//Late entry of password button to make sure that state does not advance without	
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+
+		#5 p2In = 4'b0010;	//Entry of correct decimal 2. From now on, further blocks are for each digit. 
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+	
+		#5 p2In = 4'b0011;	//Entry of correct decimal 3.  
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+
+		#5 p2In = 4'b0011;	//Entry of correct decimal 3. 
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk); 	//End result should be return of state machine to start. Incorrect flag should be
+		@(posedge clk);		//raised. 
+		
+		#5 p2In = 4'b0011;	//Entry of correct decimal 3. Now begins the input sequence for correct password.
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+
+		#5 p2In = 4'b0010;	//Entry of correct decimal 2. 
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+
+		#5 p2In = 4'b0011;	//Entry of correct decimal 3. 
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);
+
+		#5 p2In = 4'b0011;	//Entry of correct decimal 3. 
+		@(posedge clk);		
+		@(posedge clk);
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);		//End result should be in final, operational state. p1/p2load Out should now be
+		@(posedge clk);		//functional, as well as loggedIn/Out switching bits. 
+
+		#5 p2In = 4'b1010;
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2Button = 1'b1;
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2Button = 1'b0;
+		@(posedge clk);
+		@(posedge clk);
+		#5 p2In = 4'b0000;
+		@(posedge clk);
+		@(posedge clk);		//Testing to see if operational. p2load should now display 10 after a single clock cycle.
+
+		#5 passButton = 1'b0; 		
+		@(posedge clk);
+		@(posedge clk);
+		#5 passButton = 1'b1;
+		@(posedge clk);
+		@(posedge clk);		//Testing of logOut function. Should return the state back to DIGIT0 and start
+					//process all over again. 
+	end
+endmodule

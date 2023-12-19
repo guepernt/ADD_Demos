@@ -1,0 +1,257 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "logged_in",
+					"strict" : false
+				},
+				{
+					"name" : "logged_out",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tens_digit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ones_digit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "is_guest",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "D100_Disp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "D10_Disp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "D1_Disp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Diff_And_Hundred_Disp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "input_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Player_Input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Player_Input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Player_Input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Player_Input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Load_P_In",
+					"strict" : false
+				},
+				{
+					"name" : "passwd_load",
+					"strict" : false
+				},
+				{
+					"name" : "RNG_Gen_In",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

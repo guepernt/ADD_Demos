@@ -1,0 +1,27 @@
+
+State Machine - |Lab2_ZHANG_David|AccessController:MASTER|State
+Name State.OPERATIONAL State.VERIFY State.DIGIT3 State.DIGIT2 State.DIGIT1 State.DIGIT0 
+State.DIGIT0 0 0 0 0 0 0 
+State.DIGIT1 0 0 0 0 1 1 
+State.DIGIT2 0 0 0 1 0 1 
+State.DIGIT3 0 0 1 0 0 1 
+State.VERIFY 0 1 0 0 0 1 
+State.OPERATIONAL 1 0 0 0 0 1 
+
+State Machine - |Lab2_ZHANG_David|ButtonShaper:BSP|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |Lab2_ZHANG_David|ButtonShaper:BS2|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |Lab2_ZHANG_David|ButtonShaper:BS1|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 

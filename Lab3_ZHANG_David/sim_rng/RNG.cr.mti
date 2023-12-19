@@ -1,0 +1,15 @@
+D:/ADD_Demos/Lab3_ZHANG_David/sim_rng/RNG.v {1 {vlog -work work -stats=none {D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\RNG.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RNG
+
+Top level modules:
+	RNG
+
+} {} {}} D:/ADD_Demos/Lab3_ZHANG_David/sim_rng/tb_RNG.v {1 {vlog -work work -stats=none {D:\ADD_Demos\Lab3_ZHANG_David\sim_rng\tb_RNG.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_RNG
+
+Top level modules:
+	tb_RNG
+
+} {} {}}

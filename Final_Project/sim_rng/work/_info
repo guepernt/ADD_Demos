@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit
+vRAM_PSWD
+Z0 !s110 1683854338
+!i10b 1
+!s100 >Dk?62[0HCOClKIS5HKhI0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ib23D=:Bl3oDGo[6Z^nC6?1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/ADD_Demos/Final_Project/sim_rng
+w1680828879
+8D:/ADD_Demos/Final_Project/src/RAM_PSWD.v
+FD:/ADD_Demos/Final_Project/src/RAM_PSWD.v
+!i122 13
+L0 40 71
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1683854338.000000
+!s107 D:/ADD_Demos/Final_Project/src/RAM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/src/RAM_PSWD.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@r@a@m_@p@s@w@d
+vRAM_Scoring
+!s110 1683854417
+!i10b 1
+!s100 5EjSkEh;HTAlR=]8I2XlN1
+R1
+IOoiCS_d@k:Hn7T4DdJ?aK1
+R2
+R3
+w1683230884
+8D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v
+FD:/ADD_Demos/Final_Project/syn/RAM_Scoring.v
+!i122 14
+L0 40 65
+R4
+r1
+!s85 0
+31
+!s108 1683854417.000000
+!s107 D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v|
+!i113 1
+R6
+R7
+n@r@a@m_@scoring
+vRNG_Project
+!s110 1683179433
+!i10b 1
+!s100 ljE]]4@T_U@hIoP8B:aUc2
+R1
+IRFa:HA^0C=j?T:j^S9S`b1
+R2
+R3
+w1683179415
+8D:/ADD_Demos/Final_Project/sim_rng/RNG_Project.v
+FD:/ADD_Demos/Final_Project/sim_rng/RNG_Project.v
+!i122 0
+L0 7 42
+R4
+r1
+!s85 0
+31
+!s108 1683179432.000000
+!s107 D:/ADD_Demos/Final_Project/sim_rng/RNG_Project.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim_rng/RNG_Project.v|
+!i113 1
+R6
+R7
+n@r@n@g_@project
+vScoring
+R0
+!i10b 1
+!s100 3UAVB=EXJh2R[GH`?lnek1
+R1
+I@0loQPi1@<obIA>o;R3Ga3
+R2
+R3
+w1683231347
+8D:/ADD_Demos/Final_Project/sim_scoring/Scoring.v
+FD:/ADD_Demos/Final_Project/sim_scoring/Scoring.v
+!i122 11
+L0 10 140
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/ADD_Demos/Final_Project/sim_scoring/Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim_scoring/Scoring.v|
+!i113 1
+R6
+R7
+n@scoring
+vtb_RNGProject
+!s110 1683180290
+!i10b 1
+!s100 W4lo<WaEUHbDF=HUB@jO32
+R1
+Iz_lF><W109A]dlOfa@15o0
+R2
+R3
+w1683180287
+8D:/ADD_Demos/Final_Project/sim_rng/tb_RNGProject.v
+FD:/ADD_Demos/Final_Project/sim_rng/tb_RNGProject.v
+!i122 5
+L0 7 31
+R4
+r1
+!s85 0
+31
+!s108 1683180290.000000
+!s107 D:/ADD_Demos/Final_Project/sim_rng/tb_RNGProject.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim_rng/tb_RNGProject.v|
+!i113 1
+R6
+R7
+ntb_@r@n@g@project
+vtb_Scoring
+R0
+!i10b 1
+!s100 ;gPLQaKAPcjclM58PDHzn3
+R1
+IbCbC^@E=]HhAS>BnOF9jj2
+R2
+R3
+w1683231591
+8D:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v
+FD:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v
+!i122 12
+L0 7 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v|
+!i113 1
+R6
+R7
+ntb_@scoring

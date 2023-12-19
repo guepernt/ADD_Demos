@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/20.1
+vLoadRegister
+!s110 1676618554
+!i10b 1
+!s100 XZ;A;lA9a@h4zH^nlE9zb2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXAWC`5NI;X^dJ_1dDYoKV0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Lab2_ZHANG_David/sim_loadreg
+w1676618552
+8D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\LoadRegister.v
+FD:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\LoadRegister.v
+!i122 0
+L0 1 25
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1676618554.000000
+!s107 D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\LoadRegister.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\LoadRegister.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@load@register
+vtb_LoadRegister
+!s110 1676619140
+!i10b 1
+!s100 <>ZMPM7E6nM^:`chhF2[V0
+R0
+I3jeZlVFM`;MmCZXZJFi_]1
+R1
+R2
+w1676619123
+8D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\tb_LoadRegister
+FD:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\tb_LoadRegister
+!i122 2
+L0 2 53
+R3
+r1
+!s85 0
+31
+!s108 1676619140.000000
+!s107 D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\tb_LoadRegister|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\ADD_Demos\Lab2_ZHANG_David\sim_loadreg\tb_LoadRegister|
+!i113 1
+R4
+R5
+ntb_@load@register

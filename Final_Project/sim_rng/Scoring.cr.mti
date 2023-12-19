@@ -1,0 +1,29 @@
+D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v {1 {vlog -work work -stats=none D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM_Scoring
+
+Top level modules:
+	RAM_Scoring
+
+} {} {}} D:/ADD_Demos/Final_Project/sim_scoring/Scoring.v {1 {vlog -work work -stats=none D:/ADD_Demos/Final_Project/sim_scoring/Scoring.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Scoring
+
+Top level modules:
+	Scoring
+
+} {} {}} D:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v {1 {vlog -work work -stats=none D:/ADD_Demos/Final_Project/sim_scoring/tb_Scoring.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_Scoring
+
+Top level modules:
+	tb_Scoring
+
+} {} {}} D:/ADD_Demos/Final_Project/src/RAM_PSWD.v {1 {vlog -work work -stats=none D:/ADD_Demos/Final_Project/src/RAM_PSWD.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM_PSWD
+
+Top level modules:
+	RAM_PSWD
+
+} {} {}}

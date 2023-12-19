@@ -1,0 +1,36 @@
+D:/ADD_Demos/Lab2_ZHANG_David/src/Adder4Bit.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/Adder4Bit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder4Bit
+
+Top level modules:
+	Adder4Bit
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/src/ButtonShaper.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/ButtonShaper.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ButtonShaper
+
+Top level modules:
+	ButtonShaper
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/src/Decoder7Seg.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/Decoder7Seg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Decoder7Seg
+
+Top level modules:
+	Decoder7Seg
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/src/LoadRegister.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/LoadRegister.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LoadRegister
+
+Top level modules:
+	LoadRegister
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/src/AccessController.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/AccessController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AccessController
+
+Top level modules:
+	AccessController
+
+} {} {}}

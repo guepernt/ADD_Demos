@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "turnOn",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
+					"name" : "tempHigh",
+					"strict" : false
+				},
+				{
+					"name" : "personPresent",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

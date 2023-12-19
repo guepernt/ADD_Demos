@@ -1,0 +1,32 @@
+Quartus Prime Archive log --	D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.qarlog
+
+Archive:	D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.qar
+Date:		Fri Apr 07 03:56:19 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/AccessControllerSplit.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/Adder4Bit.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/ButtonShaper.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/Decoder7Seg.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/GameController.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/LoadRegister.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/RNG_LFSR.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/digitTimer.v
+D:/ADD_Demos/Lab4_ZHANG_David/src/mux_2to1.v
+D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.qpf
+D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.qsf
+D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v
+D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.hex
+D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v
+D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.hex
+D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v
+d:/intelfpga/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 21 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,10 @@
+//ECE 6370
+//David Zhang, 2213233
+//Lab 4 Module
+
+//This module defines all the modules and connections that go inside of Lab 4.
+//It is functionally identical to Lab 3 except for the instantiations of 
+//the ROM and RAM that are needed for some of the bonus features. 
+module Lab4_ZHANG_David ();
+
+endmodule

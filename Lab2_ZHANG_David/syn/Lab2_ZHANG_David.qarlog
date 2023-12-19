@@ -1,0 +1,20 @@
+Quartus Prime Archive log --	D:/ADD_Demos/Lab2_ZHANG_David/syn/Lab2_ZHANG_David.qarlog
+
+Archive:	D:/ADD_Demos/Lab2_ZHANG_David/syn/Lab2_ZHANG_David.qar
+Date:		Fri Feb 24 02:23:55 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/ADD_Demos/Lab2_ZHANG_David/Lab2_ZHANG_David.v
+D:/ADD_Demos/Lab2_ZHANG_David/src/AccessController.v
+D:/ADD_Demos/Lab2_ZHANG_David/src/Adder4Bit.v
+D:/ADD_Demos/Lab2_ZHANG_David/src/ButtonShaper.v
+D:/ADD_Demos/Lab2_ZHANG_David/src/Decoder7Seg.v
+D:/ADD_Demos/Lab2_ZHANG_David/src/LoadRegister.v
+D:/ADD_Demos/Lab2_ZHANG_David/syn/Lab2_ZHANG_David.qpf
+D:/ADD_Demos/Lab2_ZHANG_David/syn/Lab2_ZHANG_David.qsf
+d:/intelfpga/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,179 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab4_ZHANG_David/sim_RNG_LFSR
+vAccessController
+!s110 1680730979
+!i10b 1
+!s100 ]8eUVDfJF35;i9BP^NenT0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjFzMBhkncI=LZ`^274iGQ3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit
+w1680476877
+8D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessController.v
+FD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessController.v
+!i122 34
+L0 10 140
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1680730979.000000
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessController.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@access@controller
+vAccessControllerSplit
+Z6 !s110 1680848154
+!i10b 1
+!s100 TYCLI_N5j?aZLn^l32ZM_1
+R0
+Idda?[DlzV`6d[C`d0gTgX1
+R1
+R2
+w1680732282
+8D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessControllerSplit.v
+FD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessControllerSplit.v
+!i122 46
+L0 10 20
+R3
+r1
+!s85 0
+31
+Z7 !s108 1680848154.000000
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessControllerSplit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/AccessControllerSplit.v|
+!i113 1
+R4
+R5
+n@access@controller@split
+vAuthentication
+!s110 1680855895
+!i10b 1
+!s100 C>QEz@Bf;WHWH8nCZL[R?3
+R0
+IJK5V>H5geT<B:=m2D4Z`;1
+R1
+R2
+w1680855767
+8D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v
+FD:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v
+!i122 72
+L0 10 168
+R3
+r1
+!s85 0
+31
+!s108 1680855894.000000
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v|
+!i113 1
+R4
+R5
+n@authentication
+vGameController
+R6
+!i10b 1
+!s100 YE]S=;Td=IHoZG855_8RR1
+R0
+I_g2:ZX`8nz]C=30TV5]CR3
+R1
+R2
+w1680732009
+8D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/GameController.v
+FD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/GameController.v
+!i122 43
+L0 10 115
+R3
+r1
+!s85 0
+31
+!s108 1680848153.000000
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/GameController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/GameController.v|
+!i113 1
+R4
+R5
+n@game@controller
+vRAM_PSWD
+R6
+!i10b 1
+!s100 >Dk?62[0HCOClKIS5HKhI0
+R0
+IR6S:ZjoSLNPSkQ16I^aX=2
+R1
+R2
+w1680828879
+8D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v
+FD:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v
+!i122 47
+L0 40 71
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v|
+!i113 1
+R4
+R5
+n@r@a@m_@p@s@w@d
+vROM_PSWD
+R6
+!i10b 1
+!s100 TXXBm=XdgJ6Ie8A5J6`Rc0
+R0
+IZcfdnJgF0Hf?BH4O1HYIg3
+R1
+R2
+w1680558959
+8D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v
+FD:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v
+!i122 44
+L0 40 66
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v|
+!i113 1
+R4
+R5
+n@r@o@m_@p@s@w@d
+vtb_Authentication
+!s110 1680856098
+!i10b 1
+!s100 K:l;@XO4W=6EOgFnb50M71
+R0
+I8M[1Q3kN1:l4nM@3c38963
+R1
+R2
+w1680856092
+8D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/tb_Authentication.v
+FD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/tb_Authentication.v
+!i122 73
+L0 10 64
+R3
+r1
+!s85 0
+31
+!s108 1680856098.000000
+!s107 D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/tb_Authentication.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit/tb_Authentication.v|
+!i113 1
+R4
+R5
+ntb_@authentication

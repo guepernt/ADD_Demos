@@ -1,0 +1,394 @@
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v failed with 1 errors.
+# 18 compiles, 1 failed with 1 error.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v failed with 1 errors.
+# 18 compiles, 1 failed with 1 error.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 0 failed with no errors.
+vsim -gui work.testbench_BCD_Math_Game
+# vsim -gui work.testbench_BCD_Math_Game 
+# Start time: 11:09:18 on May 06,2023
+# Loading work.testbench_BCD_Math_Game
+# Loading work.BCD_Math_Game
+# Loading work.ButtonShaper
+# Loading work.AccessController
+# Loading work.ID_ROM
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_BCD_Math_Game/DUT_BCD_Math_Game/DUT_ID_ROM File: C:/Users/creat/Desktop/BCD_Math_Game/sim/ID_ROM.v Line: 59
+#         Searched libraries:
+#             C:/Users/creat/Desktop/BCD_Math_Game/sim/work
+# Loading work.pass_ROM
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_BCD_Math_Game/DUT_BCD_Math_Game/DUT_pass_ROM File: C:/Users/creat/Desktop/BCD_Math_Game/sim/pass_ROM.v Line: 59
+#         Searched libraries:
+#             C:/Users/creat/Desktop/BCD_Math_Game/sim/work
+# Loading work.TwoBitsTimer
+# Loading work.OneSecondTimer
+# Loading work.OneHundMiliSecTimer
+# Loading work.OneMilliSecLFSR
+# Loading work.CountToHundred
+# Loading work.CountToTen
+# Loading work.DigitTimer
+# Loading work.RNG_Project
+# Loading work.SevenSegmentDecoder
+# Loading work.ALU
+# Loading work.Scoring
+# Loading work.RAM_Scoring
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_BCD_Math_Game/DUT_BCD_Math_Game/RAM_Scoring_Instance File: C:/Users/creat/Desktop/BCD_Math_Game/sim/RAM_Scoring.v Line: 63
+#         Searched libraries:
+#             C:/Users/creat/Desktop/BCD_Math_Game/sim/work
+# Error loading design
+# End time: 11:09:19 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 4
+vsim -gui work.testbench_BCD_Math_Game -L altera_mf_ver -L altera_ver
+# vsim -gui work.testbench_BCD_Math_Game -L altera_mf_ver -L altera_ver 
+# Start time: 11:09:35 on May 06,2023
+# Loading work.testbench_BCD_Math_Game
+# Loading work.BCD_Math_Game
+# Loading work.ButtonShaper
+# Loading work.AccessController
+# Loading work.ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.pass_ROM
+# Loading work.TwoBitsTimer
+# Loading work.OneSecondTimer
+# Loading work.OneHundMiliSecTimer
+# Loading work.OneMilliSecLFSR
+# Loading work.CountToHundred
+# Loading work.CountToTen
+# Loading work.DigitTimer
+# Loading work.RNG_Project
+# Loading work.SevenSegmentDecoder
+# Loading work.ALU
+# Loading work.Scoring
+# Loading work.RAM_Scoring
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (4) for port 'gwinner'. The port definition is at: C:/Users/creat/Desktop/BCD_Math_Game/sim/Scoring.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_BCD_Math_Game/DUT_BCD_Math_Game/Scoring_Instance File: C:/Users/creat/Desktop/BCD_Math_Game/sim/BCD_Math_Game.v Line: 72
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v failed with 1 errors.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 1 failed with 1 error.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v failed with 1 errors.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 1 failed with 1 error.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_ver work.testbench_BCD_Math_Game
+# End time: 11:11:12 on May 06,2023, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 5
+# vsim -gui -L altera_mf_ver -L altera_ver work.testbench_BCD_Math_Game 
+# Start time: 11:11:12 on May 06,2023
+# Loading work.testbench_BCD_Math_Game
+# Loading work.BCD_Math_Game
+# Loading work.ButtonShaper
+# Loading work.AccessController
+# Loading work.ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.pass_ROM
+# Loading work.TwoBitsTimer
+# Loading work.OneSecondTimer
+# Loading work.OneHundMiliSecTimer
+# Loading work.OneMilliSecLFSR
+# Loading work.CountToHundred
+# Loading work.CountToTen
+# Loading work.DigitTimer
+# Loading work.RNG_Project
+# Loading work.SevenSegmentDecoder
+# Loading work.ALU
+# Loading work.Scoring
+# Loading work.RAM_Scoring
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/AccessController_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/Scoring_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/RAM_Scoring_Instance/*
+run 10000ns
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_pass_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v failed with 1 errors.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v failed with 3 errors.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 2 failed with 4 errors.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v failed with 3 errors.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 1 failed with 3 errors.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v failed with 2 errors.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 1 failed with 2 errors.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v failed with 2 errors.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 1 failed with 2 errors.
+# Compile of AccessController.v was successful.
+# Compile of BCD_Math_Game.v was successful.
+# Compile of ButtonShaper.v was successful.
+# Compile of CountToHundred.v was successful.
+# Compile of CountToTen.v was successful.
+# Compile of DigitTimer.v was successful.
+# Compile of ID_ROM.v was successful.
+# Compile of OneHundMiliSecTimer.v was successful.
+# Compile of OneMilliSecLFSR.v was successful.
+# Compile of OneSecondTimer.v was successful.
+# Compile of pass_ROM.v was successful.
+# Compile of RNG_Project.v was successful.
+# Compile of SevenSegmentDecoder.v was successful.
+# Compile of testbench_BCD_Math_Game.v was successful.
+# Compile of TwoBitsTimer.v was successful.
+# Compile of ALU.v was successful.
+# Compile of RAM_Scoring.v was successful.
+# Compile of Scoring.v was successful.
+# 18 compiles, 0 failed with no errors.
+# Load canceled
+vsim -gui -L altera_mf_ver -L altera_ver work.testbench_BCD_Math_Game
+# End time: 11:19:38 on May 06,2023, Elapsed time: 0:08:26
+# Errors: 0, Warnings: 6
+# vsim -gui -L altera_mf_ver -L altera_ver work.testbench_BCD_Math_Game 
+# Start time: 11:19:38 on May 06,2023
+# Loading work.testbench_BCD_Math_Game
+# Loading work.BCD_Math_Game
+# Loading work.ButtonShaper
+# Loading work.AccessController
+# Loading work.ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.pass_ROM
+# Loading work.TwoBitsTimer
+# Loading work.OneSecondTimer
+# Loading work.OneHundMiliSecTimer
+# Loading work.OneMilliSecLFSR
+# Loading work.CountToHundred
+# Loading work.CountToTen
+# Loading work.DigitTimer
+# Loading work.RNG_Project
+# Loading work.SevenSegmentDecoder
+# Loading work.ALU
+# Loading work.Scoring
+# Loading work.RAM_Scoring
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/AccessController_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/Scoring_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/RAM_Scoring_Instance/*
+run 10000ns
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_pass_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+restart
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/ALU_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/ALU_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/Scoring_Instance/*
+add wave sim:/testbench_BCD_Math_Game/DUT_BCD_Math_Game/RAM_Scoring_Instance/*
+run 10000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_pass_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 10000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2250000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 2770000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 3290000  Instance: testbench_BCD_Math_Game.DUT_BCD_Math_Game.DUT_ID_ROM.altsyncram_component.m_default.altsyncram_inst
+# End time: 12:21:27 on May 06,2023, Elapsed time: 1:01:49
+# Errors: 0, Warnings: 1

@@ -1,0 +1,69 @@
+
+State Machine - |BCD_Math_Game|Scoring:Scoring_Instance|State
+Name State.CHECK State.WRITE State.COMPARE State.CATCH State.FETCH State.WAIT State.RAM_INIT 
+State.RAM_INIT 0 0 0 0 0 0 0 
+State.WAIT 0 0 0 0 0 1 1 
+State.FETCH 0 0 0 0 1 0 1 
+State.CATCH 0 0 0 1 0 0 1 
+State.COMPARE 0 0 1 0 0 0 1 
+State.WRITE 0 1 0 0 0 0 1 
+State.CHECK 1 0 0 0 0 0 1 
+
+State Machine - |BCD_Math_Game|ALU:ALU_Instance|State
+Name State.CHECKSCORE State.SCORE State.PLAY State.INIT 
+State.INIT 0 0 0 0 
+State.PLAY 0 0 1 1 
+State.SCORE 0 1 0 1 
+State.CHECKSCORE 1 0 0 1 
+
+State Machine - |BCD_Math_Game|AccessController:AccessController_Instance|State
+Name State.tmp3 State.tmp2 State.tmp State.Reset State.GameOver State.GameStart State.setDifficulty State.Authenticated State.Compare State.GetID State.Cycle State.Fetch State.Wait 
+State.Wait 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.Fetch 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.Cycle 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.GetID 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.Compare 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.Authenticated 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.setDifficulty 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.GameStart 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.GameOver 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.Reset 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.tmp 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.tmp2 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.tmp3 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |BCD_Math_Game|ButtonShaper:RNG_Generation_pulse|curState
+Name curState.INIT curState.WAIT curState.PULSE 
+curState.INIT 0 0 0 
+curState.PULSE 1 0 1 
+curState.WAIT 1 1 0 
+
+State Machine - |BCD_Math_Game|ButtonShaper:RNG_Generation_pulse|nextState
+Name nextState.INIT nextState.WAIT nextState.PULSE 
+nextState.INIT 0 0 0 
+nextState.PULSE 1 0 1 
+nextState.WAIT 1 1 0 
+
+State Machine - |BCD_Math_Game|ButtonShaper:Player_input_pulse|curState
+Name curState.INIT curState.WAIT curState.PULSE 
+curState.INIT 0 0 0 
+curState.PULSE 1 0 1 
+curState.WAIT 1 1 0 
+
+State Machine - |BCD_Math_Game|ButtonShaper:Player_input_pulse|nextState
+Name nextState.INIT nextState.WAIT nextState.PULSE 
+nextState.INIT 0 0 0 
+nextState.PULSE 1 0 1 
+nextState.WAIT 1 1 0 
+
+State Machine - |BCD_Math_Game|ButtonShaper:Passwd_pulse|curState
+Name curState.INIT curState.WAIT curState.PULSE 
+curState.INIT 0 0 0 
+curState.PULSE 1 0 1 
+curState.WAIT 1 1 0 
+
+State Machine - |BCD_Math_Game|ButtonShaper:Passwd_pulse|nextState
+Name nextState.INIT nextState.WAIT nextState.PULSE 
+nextState.INIT 0 0 0 
+nextState.PULSE 1 0 1 
+nextState.WAIT 1 1 0 

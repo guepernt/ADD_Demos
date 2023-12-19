@@ -1,0 +1,149 @@
+//ECE 6370
+//David Zhang
+//Multi-User Scoring Module
+
+//This module handles Multi-User Scoring. When a score request is sent from the access controller along with a player's ID and score,
+//this module checks the corresponding RAM address of this player to determine whether that player has set a new personal best or is 
+//the newest high score among all players. Corresponding signals are sent back to the access controller if they have in either case, 
+//along with a valid signal in the case that neither are achieved. 
+
+module Scoring(score_request, playerID, score, pwinner, gwinner, valid, WRen, toRAM, fromRAM, RAMaddr, D10, D1, clk , rst);
+	input score_request, clk, rst;
+	input [4:0] playerID;
+	input [6:0] score; 		//Configurable for whatever we deem max score to be, placeholder of 64 max
+	input [6:0] fromRAM;		//See above. Score to RAM, configurable to whatever.
+	
+	output pwinner, WRen, valid;
+	output [6:0] toRAM;		//For consistency same size as above.
+	output [3:0] D10, D1;
+	output [4:0] RAMaddr, gwinner;	//Whatever size we deem necessary for RAM. SAME SIZE AS PLAYERID
+	reg pwinner, WRen, valid;
+	reg [6:0] toRAM, scoreFromRAM;	//TBC
+	reg [4:0] RAMaddr;		//TBC
+	reg [1:0] RAM_timer;
+	reg [6:0] globalHS;
+	reg [4:0] globalHS_player, gwinner;
+	reg [3:0] D10, D1;
+	parameter RAM_INIT = 0, WAIT = 1, FETCH = 2, CATCH = 3, COMPARE = 4, WRITE = 5, CHECK = 6;
+	reg [2:0] State;
+	
+	always @(posedge clk) begin
+		if (rst == 1'b0) begin
+			pwinner <= 0;
+			gwinner <= 0;
+			WRen <= 0;
+			toRAM <= 0;
+			RAMaddr <= 0;
+			State <= RAM_INIT;
+			RAM_timer <= 0;
+			scoreFromRAM <= 0;
+			valid <= 0;
+			globalHS <=0;
+			globalHS_player <= 0;
+			D10 <= 0; D1 <= 0;
+		end
+		else begin
+			D10 <= score / 10;
+			D1 <= score % 10;
+			case(State)
+				RAM_INIT: begin
+					if (RAM_timer == 2'b11) begin
+						RAM_timer <= 0;
+						RAMaddr <= RAMaddr + 1;
+					end
+					else begin
+						WRen <= 1;
+						toRAM <= 0;
+						RAM_timer <= RAM_timer + 1;
+						if (RAMaddr == 5'b11111) begin	//Placeholder value. TBC once RAM size known.
+							State <= WAIT;
+							RAM_timer <= 0;
+							WRen <= 0;		//Stop writing.
+						end
+					end
+				end
+
+				WAIT: begin
+					valid <= 0;				//For when you return to this state after loop
+					//gwinner <= 0;
+					pwinner <= 0;
+					if (score_request == 1'b1) begin
+						if (playerID != 3'b011) begin	//Whatever guest ID turns out being, in this case 3
+							State <= FETCH;			//Stop trying to make Fetch happen!
+						end
+						else begin 
+							State <= CHECK;
+						end
+					end
+				end
+
+				FETCH: begin
+					RAMaddr <= playerID; 			//Player's ID should be same as address spot.
+					WRen <= 0;				//Make SURE you're not writing.
+					RAM_timer <= RAM_timer + 1;
+					if (RAM_timer == 2'b11) begin 
+						State <= CATCH;
+						RAM_timer <= 0;			//Move to CATCH after waiting 3 cycles.
+					end
+				end
+
+				CATCH: begin
+					scoreFromRAM <= fromRAM; 
+					State <= COMPARE;
+				end
+
+				COMPARE: begin
+					if (scoreFromRAM > score) begin
+						State <= WAIT;
+						valid <= 1;			//RIP bozo, your score was low af.
+					end
+					else begin
+						State <= WRITE;
+					end
+				end
+
+				WRITE: begin
+					toRAM <= score;
+					WRen <= 1;
+					pwinner <= 1;				//Congrats, you got a high score. 
+					RAM_timer <= RAM_timer + 1;
+					if (RAM_timer == 2'b11) begin
+						State <= CHECK;
+						RAM_timer <= 0;
+					
+					end
+				end
+
+				CHECK: begin
+					WRen <= 0;
+					if (score > globalHS) begin		//Record into storage if player is global HS
+						gwinner <= playerID;
+						globalHS_player <= playerID;
+						globalHS <= score;
+						valid <= 1;
+						State <= WAIT;
+					end
+					else begin				//Otherwise, don't trip global winning flag.
+						//gwinner <= 0;
+						valid <= 1;
+						State <= WAIT;
+					end
+				end
+
+				default: begin					//Basically reset without going to RAM_INIT
+					pwinner <= 0;
+					gwinner <= 0;
+					WRen <= 0;
+					toRAM <= 0;
+					RAMaddr <= 0;
+					RAM_timer <= 0;
+					scoreFromRAM <= 0;
+					valid <= 0;
+					globalHS <=0;
+					globalHS_player <= 0;
+					State <= WAIT;
+				end
+			endcase
+		end
+	end	
+endmodule

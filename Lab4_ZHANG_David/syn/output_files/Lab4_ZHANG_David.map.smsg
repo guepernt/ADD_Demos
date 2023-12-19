@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at Lab4_ZHANG_David.v(12): object "SUMDISPLAY" differs only in case from object "sumdisplay" in the same scope File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 12
+Info (10281): Verilog HDL Declaration information at Lab4_ZHANG_David.v(12): object "SCORETENS" differs only in case from object "scoreTens" in the same scope File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 12

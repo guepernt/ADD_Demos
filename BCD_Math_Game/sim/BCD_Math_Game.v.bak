@@ -1,0 +1,77 @@
+module BCD_Math_Game(clk, reset, RNG_Gen_In, Load_P_In, passwd_load, input_data, Player_Input,
+                     logged_in, logged_out, tens_digit, ones_digit, is_guest, 
+                     D100_Disp, D10_Disp, D1_Disp,  Diff_And_Hundred_Disp, LEDs);
+
+    input clk, reset, RNG_Gen_In, Load_P_In, passwd_load;
+    input [3:0] input_data, Player_Input;
+
+    output logged_in, logged_out;
+    output [6:0] tens_digit, ones_digit;
+    output [6:0] D100_Disp, D10_Disp, D1_Disp;
+    output [6:0] Diff_And_Hundred_Disp;
+    output is_guest;
+
+    wire Timeout, Reconfig, enable, logged_in;
+    wire RNG_Gen_Out, RNG_Gen_pulse;
+    wire[3:0] ID_data;
+    wire[5:0] ID_addr;
+    wire[3:0] pass_data;
+    wire[5:0] pass_addr; 
+    wire[3:0] difficulty;
+    wire[3:0] tens, ones;
+    wire [3:0] D1000, D100, D10, D1;
+    wire [6:0] D1000_out, D100_out, D10_out, D1_out, difficulty_digit;
+
+//game module signals
+    //wire [3:0] RNG_In_D1000, RNG_In_D100, RNG_In_D10, RNG_In_D1;
+    input [3:0] Player_Input;
+    wire [6:0] Score;
+    wire Score_Req;
+
+    output [3:0] LEDs;
+    wire [3:0] Score_D10, Score_D1;
+
+    wire [6:0] toRAM, fromRAM;
+    wire Personal_Winner, Is_Valid;
+    wire [4:0]  RAMaddr, player_num, Global_Winner;
+    wire WRen;
+
+    ButtonShaper Passwd_pulse(clk, reset, passwd_load, passwd_load_pulse);
+    ButtonShaper Player_input_pulse(clk, reset,Load_P_In, Load_P_IN_pulse);
+    ButtonShaper RNG_Generation_pulse(clk, reset, RNG_Gen_In, RNG_Gen_pulse);
+
+    AccessController AccessController_Instance(clk, reset, input_data, ID_data, pass_data, passwd_load_pulse, Load_P_IN_pulse, Timeout, 
+						ID_addr, pass_addr, logged_in, logged_out, is_guest, difficulty, Reconfig, enable, 
+						RNG_Gen_pulse, RNG_Gen_Out, player_num);
+
+    ID_ROM DUT_ID_ROM(ID_addr, clk, ID_data);
+    pass_ROM DUT_pass_ROM(pass_addr, clk, pass_data);
+
+    TwoBitsTimer TwoBitsTimer_Instance(clk,reset,enable,Reconfig,tens,ones,Timeout, difficulty);
+
+    RNG_Project RNG_Project_Instance(clk, reset, RNG_Gen_Out, D1000, D100, D10, D1);
+
+    SevenSegmentDecoder Tens_digit(tens, tens_digit);
+    SevenSegmentDecoder Ones_digit(ones, ones_digit);
+
+    SevenSegmentDecoder D1000_digit(D1000, D1000_out);
+    SevenSegmentDecoder Difficulty_digit(difficulty, difficulty_digit);
+    assign Diff_And_Hundred_Disp=enable? D1000_out:difficulty_digit;
+
+    SevenSegmentDecoder D100_digit(D100, D100_out);
+    assign D100_Disp=enable? D100_out:Global_Winner;
+
+    SevenSegmentDecoder D10_digit(D10, D10_out);
+    assign D10_Disp=enable? D10_out:Score_D10;
+
+    SevenSegmentDecoder D1_digit(D1, D1_out);
+    assign D1_Disp=enable? D1_out:Score_D1;
+
+    ALU ALU_Instance(clk, reset, D1000, D100, D10, D1, enable, Load_P_IN_pulse, Timeout, Player_Input, Score, Score_Req, LEDs);
+
+    Scoring Scoring_Instance(Score_Req, player_num, Score, Personal_Winner, Global_Winner, Is_Valid, WRen, toRAM, fromRAM, RAMaddr, Score_D10, Score_D1, clk , reset);
+    RAM_Scoring RAM_Scoring_Instance(RAMaddr, clk, toRAM, WRen, fromRAM);
+
+
+
+endmodule

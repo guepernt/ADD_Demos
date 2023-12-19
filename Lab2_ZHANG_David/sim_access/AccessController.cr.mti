@@ -1,0 +1,22 @@
+D:/ADD_Demos/Lab2_ZHANG_David/src/ButtonShaper.v {1 {vlog -work work -stats=none D:/ADD_Demos/Lab2_ZHANG_David/src/ButtonShaper.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ButtonShaper
+
+Top level modules:
+	ButtonShaper
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/sim_access/AccessController.v {1 {vlog -work work -stats=none {D:\ADD_Demos\Lab2_ZHANG_David\sim_access\AccessController.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AccessController
+
+Top level modules:
+	AccessController
+
+} {} {}} D:/ADD_Demos/Lab2_ZHANG_David/sim_access/tb_AccessController.v {1 {vlog -work work -stats=none {D:\ADD_Demos\Lab2_ZHANG_David\sim_access\tb_AccessController.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_AccessController
+
+Top level modules:
+	tb_AccessController
+
+} {} {}}

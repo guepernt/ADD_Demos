@@ -1,0 +1,103 @@
+Assembler report for BCD_Math_Game
+Sat May 06 15:07:02 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.sof
+  6. Assembler Device Options: D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.pof
+  7. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Sat May 06 15:07:02 2023 ;
+; Revision Name         ; BCD_Math_Game                         ;
+; Top-level Entity Name ; BCD_Math_Game                         ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CEBA4F23C7                           ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++---------------------------------------------------------------+
+; Assembler Generated Files                                     ;
++---------------------------------------------------------------+
+; File Name                                                     ;
++---------------------------------------------------------------+
+; D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.sof ;
+; D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.pof ;
++---------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.sof ;
++----------------+------------------------------------------------------------------------+
+; Option         ; Setting                                                                ;
++----------------+------------------------------------------------------------------------+
+; JTAG usercode  ; 0x006923CC                                                             ;
+; Checksum       ; 0x006923CC                                                             ;
++----------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/ADD_Demos/BCD_Math_Game/syn/output_files/BCD_Math_Game.pof ;
++--------------------+--------------------------------------------------------------------+
+; Option             ; Setting                                                            ;
++--------------------+--------------------------------------------------------------------+
+; JTAG usercode      ; 0x00000000                                                         ;
+; Checksum           ; 0x74955041                                                         ;
+; Compression Ratio  ; 3                                                                  ;
++--------------------+--------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sat May 06 15:06:54 2023
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off BCD_Math_Game -c BCD_Math_Game
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Sat May 06 15:07:02 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+

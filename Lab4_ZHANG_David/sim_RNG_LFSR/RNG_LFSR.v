@@ -1,0 +1,33 @@
+//ECE 6370
+//David Zhang, 2213233
+//Random Number Generator Module with Linear Feedback Shift Register
+
+//This module defines the Random Number Generator, LFSR. It takes in a 1-bit active low signal from a push button
+//and increments an internal register every clock cycle that it detects this active low signal. Increment
+//in this case refers to how the LFSR works, not by exactly incrementing like a binary counter. This input
+//is not shaped, and thus how long a player pushes down on the button can be used for RNG. The output is 
+//continuously changing as long as the input is held low, and stops after input is high. 
+
+module RNG_LFSR(rngIn, clk, rst, LFSR);
+	input rngIn, clk, rst;
+	output [3:0] LFSR;
+	reg [3:0] LFSR;
+ 	wire feedback = LFSR[3] ^ (LFSR[2:0]==3'b111);
+	wire proxy;
+
+
+	assign proxy = ~rngIn;
+
+	always @(posedge clk) begin
+		if (rst == 1'b0) begin
+			LFSR <= 0;
+		end
+		if (proxy == 1'b1) begin	//Unshaped inverted signal, so active high.
+			LFSR[0] <= feedback;
+    			LFSR[1] <= LFSR[0] ~^ feedback;
+    			LFSR[2] <= LFSR[1];
+    			LFSR[3] <= LFSR[2];
+		end
+	end
+endmodule
+

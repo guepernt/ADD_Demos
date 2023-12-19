@@ -1,0 +1,15 @@
+Quartus Prime Archive log --	D:/ADD_Demos/SmartAirCon/syn/SmartAirCon.qarlog
+
+Archive:	D:/ADD_Demos/SmartAirCon/syn/SmartAirCon.qar
+Date:		Mon Jan 23 02:58:12 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/ADD_Demos/SmartAirCon/src/SmartAirCon.v
+D:/ADD_Demos/SmartAirCon/syn/SmartAirCon.qpf
+D:/ADD_Demos/SmartAirCon/syn/SmartAirCon.qsf
+d:/intelfpga/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 4 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

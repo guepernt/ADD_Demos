@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab1_ZHANG_David/sim_adder
+vDecoder7Seg
+!s110 1675485798
+!i10b 1
+!s100 1J0:RAf]Qj4gGBC>HnTL30
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImzWHVc:D3gJ?KP53SiiN]0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Lab1_ZHANG_David
+w1675485757
+8D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v
+FD:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v
+!i122 1
+L0 1 26
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1675485797.000000
+!s107 D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v|
+!s90 -reportprogress|300|-work|work|D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@decoder7@seg
+vMentalGame
+!s110 1675482408
+!i10b 1
+!s100 ljT_7i8:SV[N`FzX9k35A2
+R0
+IP28>1aX>h_LLIc3^;hEK03
+R1
+R2
+w1675482403
+8D:/ADD_Demos/Lab1_ZHANG_David/Lab1_ZHANG_David.v
+FD:/ADD_Demos/Lab1_ZHANG_David/Lab1_ZHANG_David.v
+!i122 0
+L0 1 25
+R3
+r1
+!s85 0
+31
+!s108 1675482408.000000
+!s107 D:/ADD_Demos/Lab1_ZHANG_David/Lab1_ZHANG_David.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab1_ZHANG_David/Lab1_ZHANG_David.v|
+!i113 1
+R4
+R5
+n@mental@game

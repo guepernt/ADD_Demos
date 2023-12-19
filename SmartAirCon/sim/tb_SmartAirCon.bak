@@ -1,0 +1,17 @@
+module tb_SmartAirCon ();
+	SmartAirCon DUT_SmartAirCon (enable_s, tempHigh_s, personPresent_s, turnOn_s);
+	
+	initial 
+		
+		enable_s = 0; tempHigh_s = 0, personPresent_s = 0;
+		#10 enable_s = 0; tempHigh_s = 0, personPresent_s = 1;
+		#10 enable_s = 0; tempHigh_s = 1, personPresent_s = 0;
+		#10 enable_s = 0; tempHigh_s = 1, personPresent_s = 1;
+		#10 enable_s = 1; tempHigh_s = 0, personPresent_s = 0;
+		#10 enable_s = 1; tempHigh_s = 0, personPresent_s = 1;
+		#10 enable_s = 1; tempHigh_s = 1, personPresent_s = 0;
+		#10 enable_s = 1; tempHigh_s = 1, personPresent_s = 1;
+
+
+
+endmodule

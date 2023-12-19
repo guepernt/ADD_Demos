@@ -1,0 +1,245 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "P1DISPLAY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P1DISPLAY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P2DISPLAY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TENSDISPLAY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ONESDISPLAY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SUMDISPLAY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_C",
+					"strict" : false
+				},
+				{
+					"name" : "LED_W",
+					"strict" : false
+				},
+				{
+					"name" : "LED_LI",
+					"strict" : false
+				},
+				{
+					"name" : "LED_LO",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SCORETENS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P1INPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "P1INPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P1INPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P1INPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P2BUTTON",
+					"strict" : false
+				},
+				{
+					"name" : "PASSBUTTON",
+					"strict" : false
+				},
+				{
+					"name" : "P1BUTTON",
+					"strict" : false
+				},
+				{
+					"name" : "P2INPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P2INPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P2INPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P2INPUT[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

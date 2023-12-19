@@ -1,0 +1,1086 @@
+Analysis & Synthesis report for Lab4_ZHANG_David
+Fri Apr 07 03:42:08 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|State
+ 10. State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER|State
+ 11. State Machine - |Lab4_ZHANG_David|ButtonShaper:BSC|State
+ 12. State Machine - |Lab4_ZHANG_David|ButtonShaper:BSP|State
+ 13. State Machine - |Lab4_ZHANG_David|ButtonShaper:BS1|State
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for ROM_PSWD:Romulus|altsyncram:altsyncram_component|altsyncram_5kf1:auto_generated
+ 18. Source assignments for RAM_PSWD:ARAM|altsyncram:altsyncram_component|altsyncram_7sn1:auto_generated
+ 19. Parameter Settings for User Entity Instance: ButtonShaper:BS1
+ 20. Parameter Settings for User Entity Instance: ButtonShaper:BSP
+ 21. Parameter Settings for User Entity Instance: ButtonShaper:BSC
+ 22. Parameter Settings for User Entity Instance: AccessControllerSplit:MASTER|GameController:MASTER
+ 23. Parameter Settings for User Entity Instance: AccessControllerSplit:MASTER|Authentication:MASUTAH
+ 24. Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer
+ 25. Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer|countTo100:counter
+ 26. Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter
+ 27. Parameter Settings for User Entity Instance: ROM_PSWD:Romulus|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: RAM_PSWD:ARAM|altsyncram:altsyncram_component
+ 29. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 30. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "Decoder7Seg:ARAMSeg"
+ 33. Port Connectivity Checks: "digitTimer:TensDigit"
+ 34. Port Connectivity Checks: "AccessControllerSplit:MASTER|Authentication:MASUTAH"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 07 03:42:08 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Lab4_ZHANG_David                            ;
+; Top-level Entity Name           ; Lab4_ZHANG_David                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 119                                         ;
+; Total pins                      ; 59                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 256                                         ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Lab4_ZHANG_David   ; Lab4_ZHANG_David   ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------+---------+
+; ../src/RNG_LFSR.v                ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/RNG_LFSR.v                            ;         ;
+; ../src/mux_2to1.v                ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/mux_2to1.v                            ;         ;
+; ../src/LoadRegister.v            ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/LoadRegister.v                        ;         ;
+; ../src/GameController.v          ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/GameController.v                      ;         ;
+; ../src/digitTimer.v              ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/digitTimer.v                          ;         ;
+; ../src/Decoder7Seg.v             ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/Decoder7Seg.v                         ;         ;
+; ../src/countTo100.v              ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v                          ;         ;
+; ../src/countTo10.v               ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v                           ;         ;
+; ../src/ButtonShaper.v            ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/ButtonShaper.v                        ;         ;
+; ../src/Authentication.v          ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v                      ;         ;
+; ../src/Adder4Bit.v               ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/Adder4Bit.v                           ;         ;
+; ../src/AccessControllerSplit.v   ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/AccessControllerSplit.v               ;         ;
+; ../src/1slfsr.v                  ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v                              ;         ;
+; ROM_PSWD.hex                     ; yes             ; User Hexadecimal (Intel-Format) File  ; D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.hex                          ;         ;
+; RAM_PSWD.hex                     ; yes             ; User Hexadecimal (Intel-Format) File  ; D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.hex                          ;         ;
+; ROM_PSWD.v                       ; yes             ; User Wizard-Generated File            ; D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v                            ;         ;
+; RAM_PSWD.v                       ; yes             ; User Wizard-Generated File            ; D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v                            ;         ;
+; Lab4_ZHANG_David.v               ; yes             ; User Verilog HDL File                 ; D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v                    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_5kf1.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/altsyncram_5kf1.tdf                ;         ;
+; db/altsyncram_7sn1.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/altsyncram_7sn1.tdf                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                          ; d:/intelfpga/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_72m.tdf            ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/lpm_divide_72m.tdf                 ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/sign_div_unsign_akh.tdf            ;         ;
+; db/alt_u_div_qse.tdf             ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/alt_u_div_qse.tdf                  ;         ;
+; db/lpm_divide_4am.tdf            ; yes             ; Auto-Generated Megafunction           ; D:/ADD_Demos/Lab4_ZHANG_David/syn/db/lpm_divide_4am.tdf                 ;         ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 173       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 292       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 50        ;
+;     -- 5 input functions                    ; 29        ;
+;     -- 4 input functions                    ; 68        ;
+;     -- <=3 input functions                  ; 144       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 119       ;
+;                                             ;           ;
+; I/O pins                                    ; 59        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 256       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 127       ;
+; Total fan-out                               ; 1598      ;
+; Average fan-out                             ; 2.98      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                           ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |Lab4_ZHANG_David                         ; 292 (11)            ; 119 (15)                  ; 256               ; 0          ; 59   ; 0            ; |Lab4_ZHANG_David                                                                                                 ; Lab4_ZHANG_David      ; work         ;
+;    |AccessControllerSplit:MASTER|         ; 75 (0)              ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER                                                                    ; AccessControllerSplit ; work         ;
+;       |Authentication:MASUTAH|            ; 55 (55)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH                                             ; Authentication        ; work         ;
+;       |GameController:MASTER|             ; 20 (20)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER                                              ; GameController        ; work         ;
+;    |Adder4Bit:SUM|                        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Adder4Bit:SUM                                                                                   ; Adder4Bit             ; work         ;
+;    |ButtonShaper:BS1|                     ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ButtonShaper:BS1                                                                                ; ButtonShaper          ; work         ;
+;    |ButtonShaper:BSC|                     ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ButtonShaper:BSC                                                                                ; ButtonShaper          ; work         ;
+;    |ButtonShaper:BSP|                     ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ButtonShaper:BSP                                                                                ; ButtonShaper          ; work         ;
+;    |Decoder7Seg:ARAMSeg|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:ARAMSeg                                                                             ; Decoder7Seg           ; work         ;
+;    |Decoder7Seg:Ones|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:Ones                                                                                ; Decoder7Seg           ; work         ;
+;    |Decoder7Seg:P1D|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:P1D                                                                                 ; Decoder7Seg           ; work         ;
+;    |Decoder7Seg:P2D|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:P2D                                                                                 ; Decoder7Seg           ; work         ;
+;    |Decoder7Seg:PSD|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:PSD                                                                                 ; Decoder7Seg           ; work         ;
+;    |Decoder7Seg:Tens|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|Decoder7Seg:Tens                                                                                ; Decoder7Seg           ; work         ;
+;    |LoadRegister:LR1|                     ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|LoadRegister:LR1                                                                                ; LoadRegister          ; work         ;
+;    |RAM_PSWD:ARAM|                        ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|RAM_PSWD:ARAM                                                                                   ; RAM_PSWD              ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|RAM_PSWD:ARAM|altsyncram:altsyncram_component                                                   ; altsyncram            ; work         ;
+;          |altsyncram_7sn1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|RAM_PSWD:ARAM|altsyncram:altsyncram_component|altsyncram_7sn1:auto_generated                    ; altsyncram_7sn1       ; work         ;
+;    |RNG_LFSR:RNGesus|                     ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|RNG_LFSR:RNGesus                                                                                ; RNG_LFSR              ; work         ;
+;    |ROM_PSWD:Romulus|                     ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ROM_PSWD:Romulus                                                                                ; ROM_PSWD              ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ROM_PSWD:Romulus|altsyncram:altsyncram_component                                                ; altsyncram            ; work         ;
+;          |altsyncram_5kf1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|ROM_PSWD:Romulus|altsyncram:altsyncram_component|altsyncram_5kf1:auto_generated                 ; altsyncram_5kf1       ; work         ;
+;    |digitTimer:OnesDigit|                 ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|digitTimer:OnesDigit                                                                            ; digitTimer            ; work         ;
+;    |digitTimer:TensDigit|                 ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|digitTimer:TensDigit                                                                            ; digitTimer            ; work         ;
+;    |lpm_divide:Div0|                      ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;       |lpm_divide_4am:auto_generated|     ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am        ; work         ;
+;          |sign_div_unsign_akh:divider|    ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh   ; work         ;
+;             |alt_u_div_qse:divider|       ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider ; alt_u_div_qse         ; work         ;
+;    |lpm_divide:Mod0|                      ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;       |lpm_divide_72m:auto_generated|     ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Mod0|lpm_divide_72m:auto_generated                                                   ; lpm_divide_72m        ; work         ;
+;          |sign_div_unsign_akh:divider|    ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh   ; work         ;
+;             |alt_u_div_qse:divider|       ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider ; alt_u_div_qse         ; work         ;
+;    |mux_2to1:scoreOnes|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|mux_2to1:scoreOnes                                                                              ; mux_2to1              ; work         ;
+;    |mux_2to1:scoreTens|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|mux_2to1:scoreTens                                                                              ; mux_2to1              ; work         ;
+;    |oneSecondLFSR:internalTimer|          ; 29 (10)             ; 31 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer                                                                     ; oneSecondLFSR         ; work         ;
+;       |countTo100:counter|                ; 19 (12)             ; 13 (8)                    ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer|countTo100:counter                                                  ; countTo100            ; work         ;
+;          |countTo10:counter|              ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter                                ; countTo10             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                  ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+; Name                                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF          ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+; RAM_PSWD:ARAM|altsyncram:altsyncram_component|altsyncram_7sn1:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port ; 32           ; 4            ; --           ; --           ; 128  ; RAM_PSWD.hex ;
+; ROM_PSWD:Romulus|altsyncram:altsyncram_component|altsyncram_5kf1:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 32           ; 4            ; --           ; --           ; 128  ; ROM_PSWD.hex ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------+
+; State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|State ;
++-------------------+--------------+-------------+--------------------------------------------+
+; Name              ; State.VERIFY ; State.DIGIT ; State.OPERATIONAL                          ;
++-------------------+--------------+-------------+--------------------------------------------+
+; State.DIGIT       ; 0            ; 0           ; 0                                          ;
+; State.VERIFY      ; 1            ; 1           ; 0                                          ;
+; State.OPERATIONAL ; 0            ; 1           ; 1                                          ;
++-------------------+--------------+-------------+--------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER|State                            ;
++----------------------+----------------------+----------------+----------------------+--------------------+------------+
+; Name                 ; State.RECONFIG_TIMER ; State.GAMEOVER ; State.GAMEINPROGRESS ; State.PREGAMESTART ; State.WAIT ;
++----------------------+----------------------+----------------+----------------------+--------------------+------------+
+; State.WAIT           ; 0                    ; 0              ; 0                    ; 0                  ; 0          ;
+; State.PREGAMESTART   ; 0                    ; 0              ; 0                    ; 1                  ; 1          ;
+; State.GAMEINPROGRESS ; 0                    ; 0              ; 1                    ; 0                  ; 1          ;
+; State.GAMEOVER       ; 0                    ; 1              ; 0                    ; 0                  ; 1          ;
+; State.RECONFIG_TIMER ; 1                    ; 0              ; 0                    ; 0                  ; 1          ;
++----------------------+----------------------+----------------+----------------------+--------------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------+
+; State Machine - |Lab4_ZHANG_David|ButtonShaper:BSC|State ;
++-------------+------------+------------+------------------+
+; Name        ; State.INIT ; State.WAIT ; State.PULSE      ;
++-------------+------------+------------+------------------+
+; State.INIT  ; 0          ; 0          ; 0                ;
+; State.PULSE ; 1          ; 0          ; 1                ;
+; State.WAIT  ; 1          ; 1          ; 0                ;
++-------------+------------+------------+------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------+
+; State Machine - |Lab4_ZHANG_David|ButtonShaper:BSP|State ;
++-------------+------------+------------+------------------+
+; Name        ; State.INIT ; State.WAIT ; State.PULSE      ;
++-------------+------------+------------+------------------+
+; State.INIT  ; 0          ; 0          ; 0                ;
+; State.PULSE ; 1          ; 0          ; 1                ;
+; State.WAIT  ; 1          ; 1          ; 0                ;
++-------------+------------+------------+------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------+
+; State Machine - |Lab4_ZHANG_David|ButtonShaper:BS1|State ;
++-------------+------------+------------+------------------+
+; Name        ; State.INIT ; State.WAIT ; State.PULSE      ;
++-------------+------------+------------+------------------+
+; State.INIT  ; 0          ; 0          ; 0                ;
+; State.PULSE ; 1          ; 0          ; 1                ;
+; State.WAIT  ; 1          ; 1          ; 0                ;
++-------------+------------+------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                     ;
++------------------------------------------------------------------------+-----------------------------------------------+
+; Register name                                                          ; Reason for Removal                            ;
++------------------------------------------------------------------------+-----------------------------------------------+
+; hundreds_tensB                                                         ; Stuck at VCC due to stuck port data_in        ;
+; oneSecondLFSR:internalTimer|countTo100:counter|State                   ; Merged with oneSecondLFSR:internalTimer|State ;
+; oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter|State ; Merged with oneSecondLFSR:internalTimer|State ;
+; AccessControllerSplit:MASTER|GameController:MASTER|wait_timer[2]       ; Stuck at GND due to stuck port data_in        ;
+; AccessControllerSplit:MASTER|Authentication:MASUTAH|State~6            ; Lost fanout                                   ;
+; AccessControllerSplit:MASTER|Authentication:MASUTAH|State~8            ; Lost fanout                                   ;
+; AccessControllerSplit:MASTER|GameController:MASTER|State~11            ; Lost fanout                                   ;
+; AccessControllerSplit:MASTER|GameController:MASTER|State~12            ; Lost fanout                                   ;
+; AccessControllerSplit:MASTER|GameController:MASTER|State~13            ; Lost fanout                                   ;
+; AccessControllerSplit:MASTER|GameController:MASTER|State~14            ; Lost fanout                                   ;
+; ButtonShaper:BSC|State~4                                               ; Lost fanout                                   ;
+; ButtonShaper:BSP|State~4                                               ; Lost fanout                                   ;
+; ButtonShaper:BS1|State~4                                               ; Lost fanout                                   ;
+; ButtonShaper:BSC|State.WAIT                                            ; Lost fanout                                   ;
+; ButtonShaper:BSP|State.WAIT                                            ; Lost fanout                                   ;
+; ButtonShaper:BS1|State.WAIT                                            ; Lost fanout                                   ;
+; Total Number of Removed Registers = 16                                 ;                                               ;
++------------------------------------------------------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 119   ;
+; Number of registers using Synchronous Clear  ; 76    ;
+; Number of registers using Synchronous Load   ; 11    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 50    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab4_ZHANG_David|LoadRegister:LR1|D_out[1]                                                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|dataRAM_storage[0]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab4_ZHANG_David|RNG_LFSR:RNGesus|LFSR[3]                                                           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Lab4_ZHANG_David|scoreCounterTotal[2]                                                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab4_ZHANG_David|digitTimer:TensDigit|numOut[3]                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab4_ZHANG_David|digitTimer:TensDigit|numOut[2]                                                     ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer|LFSR[15]                                               ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer|countTo100:counter|rollingCounter[3]                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Lab4_ZHANG_David|oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter|rollingCounter[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Lab4_ZHANG_David|digitTimer:OnesDigit|numOut[3]                                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Lab4_ZHANG_David|digitTimer:OnesDigit|numOut[2]                                                     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|WaitingForROM[0]               ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|Authentication:MASUTAH|State                          ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER|State                           ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Lab4_ZHANG_David|AccessControllerSplit:MASTER|GameController:MASTER|State                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM_PSWD:Romulus|altsyncram:altsyncram_component|altsyncram_5kf1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for RAM_PSWD:ARAM|altsyncram:altsyncram_component|altsyncram_7sn1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonShaper:BS1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; INIT           ; 0     ; Signed Integer                       ;
+; PULSE          ; 1     ; Signed Integer                       ;
+; WAIT           ; 2     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonShaper:BSP ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; INIT           ; 0     ; Signed Integer                       ;
+; PULSE          ; 1     ; Signed Integer                       ;
+; WAIT           ; 2     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonShaper:BSC ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; INIT           ; 0     ; Signed Integer                       ;
+; PULSE          ; 1     ; Signed Integer                       ;
+; WAIT           ; 2     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AccessControllerSplit:MASTER|GameController:MASTER ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DIGIT0         ; 0     ; Signed Integer                                                         ;
+; DIGIT1         ; 1     ; Signed Integer                                                         ;
+; DIGIT2         ; 2     ; Signed Integer                                                         ;
+; DIGIT3         ; 3     ; Signed Integer                                                         ;
+; VERIFY         ; 4     ; Signed Integer                                                         ;
+; RECONFIG_TIMER ; 5     ; Signed Integer                                                         ;
+; PREGAMESTART   ; 6     ; Signed Integer                                                         ;
+; GAMEINPROGRESS ; 7     ; Signed Integer                                                         ;
+; GAMEOVER       ; 8     ; Signed Integer                                                         ;
+; WAIT           ; 9     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AccessControllerSplit:MASTER|Authentication:MASUTAH ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; DIGIT          ; 0     ; Signed Integer                                                          ;
+; VERIFY         ; 4     ; Signed Integer                                                          ;
+; OPERATIONAL    ; 5     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; OFF            ; 0     ; Signed Integer                                  ;
+; ON             ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer|countTo100:counter ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; OFF            ; 0     ; Signed Integer                                                     ;
+; ON             ; 1     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; OFF            ; 0     ; Signed Integer                                                                       ;
+; ON             ; 1     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM_PSWD:Romulus|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------+
+; Parameter Name                     ; Value                ; Type                              ;
++------------------------------------+----------------------+-----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                           ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                           ;
+; WIDTH_A                            ; 4                    ; Signed Integer                    ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer                    ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer                    ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WIDTH_B                            ; 1                    ; Untyped                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; INIT_FILE                          ; ROM_PSWD.hex         ; Untyped                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                           ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                           ;
+; CBXI_PARAMETER                     ; altsyncram_5kf1      ; Untyped                           ;
++------------------------------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM_PSWD:ARAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                        ;
+; WIDTH_A                            ; 4                    ; Signed Integer                 ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Untyped                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; RAM_PSWD.hex         ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_7sn1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_72m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_4am ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                             ;
++-------------------------------------------+--------------------------------------------------+
+; Name                                      ; Value                                            ;
++-------------------------------------------+--------------------------------------------------+
+; Number of entity instances                ; 2                                                ;
+; Entity Instance                           ; ROM_PSWD:Romulus|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                              ;
+;     -- WIDTH_A                            ; 4                                                ;
+;     -- NUMWORDS_A                         ; 32                                               ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                           ;
+;     -- WIDTH_B                            ; 1                                                ;
+;     -- NUMWORDS_B                         ; 1                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
+; Entity Instance                           ; RAM_PSWD:ARAM|altsyncram:altsyncram_component    ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                      ;
+;     -- WIDTH_A                            ; 4                                                ;
+;     -- NUMWORDS_A                         ; 32                                               ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                           ;
+;     -- WIDTH_B                            ; 1                                                ;
+;     -- NUMWORDS_B                         ; 1                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
++-------------------------------------------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder7Seg:ARAMSeg"                                                                                                                                                                 ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; decoderin ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "digitTimer:TensDigit"                                                                     ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; DecrementU ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AccessControllerSplit:MASTER|Authentication:MASUTAH"                                       ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; dataRAM_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 119                         ;
+;     ENA               ; 20                          ;
+;     ENA SCLR          ; 23                          ;
+;     ENA SCLR SLD      ; 7                           ;
+;     SCLR              ; 45                          ;
+;     SCLR SLD          ; 1                           ;
+;     SLD               ; 3                           ;
+;     plain             ; 20                          ;
+; arriav_lcell_comb     ; 299                         ;
+;     arith             ; 60                          ;
+;         0 data inputs ; 12                          ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 4                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 228                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 64                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 50                          ;
+;     shared            ; 10                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+; boundary_port         ; 59                          ;
+; stratixv_ram_block    ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 7.50                        ;
+; Average LUT depth     ; 3.20                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Apr 07 03:42:00 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4_ZHANG_David -c Lab4_ZHANG_David
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/rng_lfsr.v
+    Info (12023): Found entity 1: RNG_LFSR File: D:/ADD_Demos/Lab4_ZHANG_David/src/RNG_LFSR.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/mux_2to1.v
+    Info (12023): Found entity 1: mux_2to1 File: D:/ADD_Demos/Lab4_ZHANG_David/src/mux_2to1.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/loadregister.v
+    Info (12023): Found entity 1: LoadRegister File: D:/ADD_Demos/Lab4_ZHANG_David/src/LoadRegister.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/gamecontroller.v
+    Info (12023): Found entity 1: GameController File: D:/ADD_Demos/Lab4_ZHANG_David/src/GameController.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/digittimer.v
+    Info (12023): Found entity 1: digitTimer File: D:/ADD_Demos/Lab4_ZHANG_David/src/digitTimer.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/decoder7seg.v
+    Info (12023): Found entity 1: Decoder7Seg File: D:/ADD_Demos/Lab4_ZHANG_David/src/Decoder7Seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/countto100.v
+    Info (12023): Found entity 1: countTo100 File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/countto10.v
+    Info (12023): Found entity 1: countTo10 File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/buttonshaper.v
+    Info (12023): Found entity 1: ButtonShaper File: D:/ADD_Demos/Lab4_ZHANG_David/src/ButtonShaper.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/authentication.v
+    Info (12023): Found entity 1: Authentication File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/adder4bit.v
+    Info (12023): Found entity 1: Adder4Bit File: D:/ADD_Demos/Lab4_ZHANG_David/src/Adder4Bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/accesscontrollersplit.v
+    Info (12023): Found entity 1: AccessControllerSplit File: D:/ADD_Demos/Lab4_ZHANG_David/src/AccessControllerSplit.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /add_demos/lab4_zhang_david/src/1slfsr.v
+    Info (12023): Found entity 1: oneSecondLFSR File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file rom_pswd.v
+    Info (12023): Found entity 1: ROM_PSWD File: D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ram_pswd.v
+    Info (12023): Found entity 1: RAM_PSWD File: D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file lab4_zhang_david.v
+    Info (12023): Found entity 1: Lab4_ZHANG_David File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 8
+Info (12127): Elaborating entity "Lab4_ZHANG_David" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Lab4_ZHANG_David.v(19): object "dummySignal" assigned a value but never read File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at Lab4_ZHANG_David.v(75): variable "AdderOutput" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 75
+Warning (10230): Verilog HDL assignment warning at Lab4_ZHANG_David.v(93): truncated value with size 7 to match size of target (4) File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 93
+Warning (10230): Verilog HDL assignment warning at Lab4_ZHANG_David.v(94): truncated value with size 7 to match size of target (4) File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 94
+Warning (10230): Verilog HDL assignment warning at Lab4_ZHANG_David.v(97): truncated value with size 32 to match size of target (7) File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 97
+Info (12128): Elaborating entity "ButtonShaper" for hierarchy "ButtonShaper:BS1" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 39
+Info (12128): Elaborating entity "LoadRegister" for hierarchy "LoadRegister:LR1" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 44
+Info (12128): Elaborating entity "RNG_LFSR" for hierarchy "RNG_LFSR:RNGesus" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 46
+Info (12128): Elaborating entity "Decoder7Seg" for hierarchy "Decoder7Seg:P1D" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 49
+Info (12128): Elaborating entity "Adder4Bit" for hierarchy "Adder4Bit:SUM" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 58
+Info (12128): Elaborating entity "AccessControllerSplit" for hierarchy "AccessControllerSplit:MASTER" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 61
+Info (12128): Elaborating entity "GameController" for hierarchy "AccessControllerSplit:MASTER|GameController:MASTER" File: D:/ADD_Demos/Lab4_ZHANG_David/src/AccessControllerSplit.v Line: 26
+Info (12128): Elaborating entity "Authentication" for hierarchy "AccessControllerSplit:MASTER|Authentication:MASUTAH" File: D:/ADD_Demos/Lab4_ZHANG_David/src/AccessControllerSplit.v Line: 28
+Warning (10036): Verilog HDL or VHDL warning at Authentication.v(29): object "RAMWait1" assigned a value but never read File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Authentication.v(67): truncated value with size 32 to match size of target (3) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 67
+Warning (10230): Verilog HDL assignment warning at Authentication.v(74): truncated value with size 32 to match size of target (3) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 74
+Warning (10230): Verilog HDL assignment warning at Authentication.v(83): truncated value with size 32 to match size of target (5) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 83
+Warning (10230): Verilog HDL assignment warning at Authentication.v(84): truncated value with size 32 to match size of target (3) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 84
+Warning (10230): Verilog HDL assignment warning at Authentication.v(94): truncated value with size 32 to match size of target (5) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 94
+Warning (10230): Verilog HDL assignment warning at Authentication.v(95): truncated value with size 32 to match size of target (2) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 95
+Warning (10230): Verilog HDL assignment warning at Authentication.v(105): truncated value with size 32 to match size of target (3) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 105
+Warning (10230): Verilog HDL assignment warning at Authentication.v(113): truncated value with size 32 to match size of target (3) File: D:/ADD_Demos/Lab4_ZHANG_David/src/Authentication.v Line: 113
+Info (12128): Elaborating entity "oneSecondLFSR" for hierarchy "oneSecondLFSR:internalTimer" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 63
+Warning (10230): Verilog HDL assignment warning at 1slfsr.v(26): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 26
+Warning (10230): Verilog HDL assignment warning at 1slfsr.v(34): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 34
+Warning (10230): Verilog HDL assignment warning at 1slfsr.v(70): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 70
+Warning (10230): Verilog HDL assignment warning at 1slfsr.v(75): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 75
+Info (12128): Elaborating entity "countTo100" for hierarchy "oneSecondLFSR:internalTimer|countTo100:counter" File: D:/ADD_Demos/Lab4_ZHANG_David/src/1slfsr.v Line: 18
+Warning (10230): Verilog HDL assignment warning at countTo100.v(24): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 24
+Warning (10230): Verilog HDL assignment warning at countTo100.v(32): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 32
+Warning (10230): Verilog HDL assignment warning at countTo100.v(53): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 53
+Warning (10230): Verilog HDL assignment warning at countTo100.v(58): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 58
+Info (12128): Elaborating entity "countTo10" for hierarchy "oneSecondLFSR:internalTimer|countTo100:counter|countTo10:counter" File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo100.v Line: 18
+Warning (10230): Verilog HDL assignment warning at countTo10.v(22): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v Line: 22
+Warning (10230): Verilog HDL assignment warning at countTo10.v(30): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v Line: 30
+Warning (10230): Verilog HDL assignment warning at countTo10.v(46): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v Line: 46
+Warning (10230): Verilog HDL assignment warning at countTo10.v(51): truncated value with size 32 to match size of target (1) File: D:/ADD_Demos/Lab4_ZHANG_David/src/countTo10.v Line: 51
+Info (12128): Elaborating entity "digitTimer" for hierarchy "digitTimer:OnesDigit" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 64
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:scoreTens" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 67
+Info (12128): Elaborating entity "ROM_PSWD" for hierarchy "ROM_PSWD:Romulus" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 70
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_PSWD:Romulus|altsyncram:altsyncram_component" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v Line: 82
+Info (12130): Elaborated megafunction instantiation "ROM_PSWD:Romulus|altsyncram:altsyncram_component" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v Line: 82
+Info (12133): Instantiated megafunction "ROM_PSWD:Romulus|altsyncram:altsyncram_component" with the following parameter: File: D:/ADD_Demos/Lab4_ZHANG_David/syn/ROM_PSWD.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ROM_PSWD.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "width_a" = "4"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5kf1.tdf
+    Info (12023): Found entity 1: altsyncram_5kf1 File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/altsyncram_5kf1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_5kf1" for hierarchy "ROM_PSWD:Romulus|altsyncram:altsyncram_component|altsyncram_5kf1:auto_generated" File: d:/intelfpga/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "RAM_PSWD" for hierarchy "RAM_PSWD:ARAM" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 72
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM_PSWD:ARAM|altsyncram:altsyncram_component" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v Line: 86
+Info (12130): Elaborated megafunction instantiation "RAM_PSWD:ARAM|altsyncram:altsyncram_component" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v Line: 86
+Info (12133): Instantiated megafunction "RAM_PSWD:ARAM|altsyncram:altsyncram_component" with the following parameter: File: D:/ADD_Demos/Lab4_ZHANG_David/syn/RAM_PSWD.v Line: 86
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "RAM_PSWD.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "width_a" = "4"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7sn1.tdf
+    Info (12023): Found entity 1: altsyncram_7sn1 File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/altsyncram_7sn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_7sn1" for hierarchy "RAM_PSWD:ARAM|altsyncram:altsyncram_component|altsyncram_7sn1:auto_generated" File: d:/intelfpga/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dataRAM_out[3]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[2]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[1]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+    Warning (12110): Net "dataRAM_out[0]" is missing source, defaulting to GND File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 36
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 93
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 94
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 94
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_72m.tdf
+    Info (12023): Found entity 1: lpm_divide_72m File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/lpm_divide_72m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/sign_div_unsign_akh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
+    Info (12023): Found entity 1: alt_u_div_qse File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/alt_u_div_qse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 93
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/ADD_Demos/Lab4_ZHANG_David/syn/Lab4_ZHANG_David.v Line: 93
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
+    Info (12023): Found entity 1: lpm_divide_4am File: D:/ADD_Demos/Lab4_ZHANG_David/syn/db/lpm_divide_4am.tdf Line: 25
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/ADD_Demos/Lab4_ZHANG_David/syn/output_files/Lab4_ZHANG_David.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 378 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 311 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Fri Apr 07 03:42:08 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/ADD_Demos/Lab4_ZHANG_David/syn/output_files/Lab4_ZHANG_David.map.smsg.
+
+

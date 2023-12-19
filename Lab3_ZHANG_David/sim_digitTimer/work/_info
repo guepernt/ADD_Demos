@@ -1,0 +1,131 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab3_ZHANG_David/sim_rng
+vcountTo10
+Z0 !s110 1678184391
+!i10b 1
+!s100 P[<d2@JQ[hg==TlGJ>o301
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6<4V5nMAfaVBz8U7Oh^??0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer
+w1677477219
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v
+!i122 29
+L0 9 47
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1678184391.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo10.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+ncount@to10
+vcountTo100
+R0
+!i10b 1
+!s100 N4jQ2?0IC4DHdgUI@b3LB1
+R1
+ISg6V?U:W3RblR;On;8CHk0
+R2
+R3
+w1677477231
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v
+!i122 30
+Z8 L0 9 54
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/countTo100.v|
+!i113 1
+R6
+R7
+ncount@to100
+vdigitTimer
+!s110 1678258364
+!i10b 1
+!s100 k^Ci3ROg[Aee>J<[8::mN3
+R1
+IfKN9ONkcdQok4E]JXS02O1
+R2
+R3
+w1678258305
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v
+!i122 34
+L0 10 45
+R4
+r1
+!s85 0
+31
+!s108 1678258363.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/digitTimer.v|
+!i113 1
+R6
+R7
+ndigit@timer
+voneSecondTimer
+R0
+!i10b 1
+!s100 X0f<aOLJ_>AD^aVfoGjjc2
+R1
+IJa=L;z1L=fEEOGD];YYO32
+R2
+R3
+w1678184027
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v
+!i122 28
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_1secTimer/1secTimer.v|
+!i113 1
+R6
+R7
+none@second@timer
+vtb_digitTimer
+!s110 1678258489
+!i10b 1
+!s100 ^8WAeP?mNJTcSN1YQ?UL=2
+R1
+I4E_F<Z9boA4[U83ae<QDS0
+R2
+R3
+w1678258485
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v
+!i122 35
+L0 9 43
+R4
+r1
+!s85 0
+31
+!s108 1678258489.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_digitTimer/tb_digitTimer.v|
+!i113 1
+R6
+R7
+ntb_digit@timer

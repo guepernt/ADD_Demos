@@ -1,0 +1,225 @@
+|Lab2_ZHANG_David
+P1INPUT[0] => P1INPUT[0].IN1
+P1INPUT[1] => P1INPUT[1].IN1
+P1INPUT[2] => P1INPUT[2].IN1
+P1INPUT[3] => P1INPUT[3].IN1
+P2INPUT[0] => P2INPUT[0].IN2
+P2INPUT[1] => P2INPUT[1].IN2
+P2INPUT[2] => P2INPUT[2].IN2
+P2INPUT[3] => P2INPUT[3].IN2
+P1DISPLAY[0] << Decoder7Seg:P1D.port1
+P1DISPLAY[1] << Decoder7Seg:P1D.port1
+P1DISPLAY[2] << Decoder7Seg:P1D.port1
+P1DISPLAY[3] << Decoder7Seg:P1D.port1
+P1DISPLAY[4] << Decoder7Seg:P1D.port1
+P1DISPLAY[5] << Decoder7Seg:P1D.port1
+P1DISPLAY[6] << Decoder7Seg:P1D.port1
+P2DISPLAY[0] << Decoder7Seg:P2D.port1
+P2DISPLAY[1] << Decoder7Seg:P2D.port1
+P2DISPLAY[2] << Decoder7Seg:P2D.port1
+P2DISPLAY[3] << Decoder7Seg:P2D.port1
+P2DISPLAY[4] << Decoder7Seg:P2D.port1
+P2DISPLAY[5] << Decoder7Seg:P2D.port1
+P2DISPLAY[6] << Decoder7Seg:P2D.port1
+SUMDISPLAY[0] << Decoder7Seg:PSD.port1
+SUMDISPLAY[1] << Decoder7Seg:PSD.port1
+SUMDISPLAY[2] << Decoder7Seg:PSD.port1
+SUMDISPLAY[3] << Decoder7Seg:PSD.port1
+SUMDISPLAY[4] << Decoder7Seg:PSD.port1
+SUMDISPLAY[5] << Decoder7Seg:PSD.port1
+SUMDISPLAY[6] << Decoder7Seg:PSD.port1
+LED_C << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+LED_W << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+LED_LI << AccessController:MASTER.port2
+LED_LO << AccessController:MASTER.port3
+P1BUTTON => P1BUTTON.IN1
+P2BUTTON => P2BUTTON.IN1
+PASSBUTTON => PASSBUTTON.IN1
+RST => RST.IN6
+CLK => CLK.IN6
+
+
+|Lab2_ZHANG_David|ButtonShaper:BS1
+D => Selector0.IN1
+D => StateNext.PULSE.DATAB
+D => Selector1.IN2
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+clk => State~1.DATAIN
+
+
+|Lab2_ZHANG_David|ButtonShaper:BS2
+D => Selector0.IN1
+D => StateNext.PULSE.DATAB
+D => Selector1.IN2
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+clk => State~1.DATAIN
+
+
+|Lab2_ZHANG_David|ButtonShaper:BSP
+D => Selector0.IN1
+D => StateNext.PULSE.DATAB
+D => Selector1.IN2
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+clk => State~1.DATAIN
+
+
+|Lab2_ZHANG_David|LoadRegister:LR1
+D_in[0] => D_out.DATAB
+D_in[1] => D_out.DATAB
+D_in[2] => D_out.DATAB
+D_in[3] => D_out.DATAB
+D_out[0] <= D_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[1] <= D_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[2] <= D_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[3] <= D_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => D_out[0]~reg0.CLK
+clk => D_out[1]~reg0.CLK
+clk => D_out[2]~reg0.CLK
+clk => D_out[3]~reg0.CLK
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+
+
+|Lab2_ZHANG_David|LoadRegister:LR2
+D_in[0] => D_out.DATAB
+D_in[1] => D_out.DATAB
+D_in[2] => D_out.DATAB
+D_in[3] => D_out.DATAB
+D_out[0] <= D_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[1] <= D_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[2] <= D_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D_out[3] <= D_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => D_out[0]~reg0.CLK
+clk => D_out[1]~reg0.CLK
+clk => D_out[2]~reg0.CLK
+clk => D_out[3]~reg0.CLK
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+rst => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+Load => D_out.OUTPUTSELECT
+
+
+|Lab2_ZHANG_David|Decoder7Seg:P1D
+decoderin[0] => Decoder0.IN3
+decoderin[1] => Decoder0.IN2
+decoderin[2] => Decoder0.IN1
+decoderin[3] => Decoder0.IN0
+decoderout[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_ZHANG_David|Decoder7Seg:P2D
+decoderin[0] => Decoder0.IN3
+decoderin[1] => Decoder0.IN2
+decoderin[2] => Decoder0.IN1
+decoderin[3] => Decoder0.IN0
+decoderout[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_ZHANG_David|Decoder7Seg:PSD
+decoderin[0] => Decoder0.IN3
+decoderin[1] => Decoder0.IN2
+decoderin[2] => Decoder0.IN1
+decoderin[3] => Decoder0.IN0
+decoderout[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+decoderout[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_ZHANG_David|Adder4Bit:SUM
+adder_in1[0] => Add0.IN4
+adder_in1[1] => Add0.IN3
+adder_in1[2] => Add0.IN2
+adder_in1[3] => Add0.IN1
+adder_in2[0] => Add0.IN8
+adder_in2[1] => Add0.IN7
+adder_in2[2] => Add0.IN6
+adder_in2[3] => Add0.IN5
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2_ZHANG_David|AccessController:MASTER
+passIn[0] => Equal0.IN1
+passIn[0] => Equal1.IN3
+passIn[1] => Equal0.IN0
+passIn[1] => Equal1.IN0
+passIn[2] => Equal0.IN3
+passIn[2] => Equal1.IN2
+passIn[3] => Equal0.IN2
+passIn[3] => Equal1.IN1
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => passwordRight.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => passwordRight.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => passwordRight.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+passButton => State.OUTPUTSELECT
+loggedIn <= loggedIn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+loggedOut <= loggedOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p1loadIn => Selector0.IN2
+p2loadIn => Selector1.IN2
+p1loadOut <= p1loadOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p2loadOut <= p2loadOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => State.OUTPUTSELECT
+rst => passwordRight.OUTPUTSELECT
+rst => p1loadOut.OUTPUTSELECT
+rst => p2loadOut.OUTPUTSELECT
+rst => loggedIn.OUTPUTSELECT
+rst => loggedOut.OUTPUTSELECT
+clk => loggedOut~reg0.CLK
+clk => loggedIn~reg0.CLK
+clk => p2loadOut~reg0.CLK
+clk => p1loadOut~reg0.CLK
+clk => passwordRight.CLK
+clk => State~7.DATAIN
+
+

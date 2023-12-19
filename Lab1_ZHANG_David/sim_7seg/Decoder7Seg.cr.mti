@@ -1,0 +1,18 @@
+D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/Decoder7Seg.v {1 {vlog -work work -stats=none {D:\ADD_Demos\Lab1_ZHANG_David\sim_7seg\Decoder7Seg.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Decoder7Seg
+
+Top level modules:
+	Decoder7Seg
+
+} {} {}} D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/tb_decoder7seg.v {2 {vlog -work work -stats=none D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/tb_decoder7seg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Warning: D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/tb_decoder7seg.v(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: D:/ADD_Demos/Lab1_ZHANG_David/sim_7seg/tb_decoder7seg.v(16): (vlog-2284) Empty $unit scope found.
+-- Compiling package tb_decoder7seg_v_unit
+-- Compiling module tb_decoder7seg
+
+Top level modules:
+	tb_decoder7seg
+
+} {} {}}

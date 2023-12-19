@@ -1,0 +1,44 @@
+//ECE 6370 
+//David Zhang, 2213233
+//Lab 2 Module 
+
+//This module defines all of Lab 2. It instantiates all the previous modules from Lab 1 along with 3 new
+//modules: ButtonShaper, LoadRegister, and AccessController which are essential in creating the login
+//function and allowing players to load their numbers into the display. 
+
+module Lab2_ZHANG_David(P1INPUT, P2INPUT, P1DISPLAY, P2DISPLAY, SUMDISPLAY, LED_C, LED_W, LED_LI, LED_LO,
+			P1BUTTON, P2BUTTON, PASSBUTTON, RST, CLK);
+
+	input [3:0] P1INPUT, P2INPUT;
+	output [6:0] P1DISPLAY, P2DISPLAY, SUMDISPLAY;
+	output LED_C, LED_W, LED_LI, LED_LO;
+	input P1BUTTON, P2BUTTON, PASSBUTTON, RST;
+	input CLK;
+	
+	wire p1load_in, p2load_in, passButton_s, p1load_out, p2load_out;
+	wire [3:0] p1load_N, p2load_N;
+	wire [3:0] AdderOutput;
+
+	ButtonShaper BS1(P1BUTTON, p1load, RST, CLK);
+	ButtonShaper BS2(P2BUTTON, p2load, RST, CLK);
+	ButtonShaper BSP(PASSBUTTON, passButton_s, RST, CLK);
+	LoadRegister LR1(P1INPUT, p1load_N, CLK, RST, p1load_out);
+	LoadRegister LR2(P2INPUT, p2load_N, CLK, RST, p2load_out);
+	Decoder7Seg P1D(p1load_N, P1DISPLAY);
+	Decoder7Seg P2D(p2load_N, P2DISPLAY);
+	Decoder7Seg PSD(AdderOutput, SUMDISPLAY);
+	Adder4Bit SUM(p1load_N, p2load_N, AdderOutput);
+	AccessController MASTER(P2INPUT, PASSBUTTON, LED_LI, LED_LO, p1load_in, p2load_in, p1load_out,
+				p2load_out, RST, CLK);
+	
+	always @(p1load_N, p2load_N) begin
+		if (AdderOutput == 4'b1111)
+			begin
+				LED_C = 1; LED_W = 0;
+			end
+		else
+			begin
+				LED_C = 0; LED_W = 1;
+			end
+	end
+endmodule

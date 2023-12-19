@@ -1,0 +1,59 @@
+//ECE 6370
+//David Zhang, 2213233
+//Testbench for 1-second Timer
+
+//This module defines the parameters for testing the 1-second timer. Since realistically is needs
+//to count to 50,000,000 on a 50 MHz clock, for a proof of concept we simply test to see if it can
+//count to 24 first, based on the nesting design of the 1 second timer. 
+`timescale 1 ns/100 ps
+module tb_1secTimer();
+	reg rst, clk, enable;
+	reg test_s;
+	wire count_out;
+	oneSecondTimer DUT(clk, rst, enable, count_out);
+
+	always
+		begin	
+			clk = 1'b0;
+			#10;
+			clk = 1'b1;
+			#10;
+		end 
+
+	initial
+	begin
+		rst = 1'b1;
+		test_s = 1'b0;
+		enable = 1'b0;
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b0;
+		@(posedge clk);
+		@(posedge clk);
+		#5 rst = 1'b1;
+		@(posedge clk);
+		@(posedge clk);
+		@(posedge clk);	//Multiple clock cycles later to make sure it doesn't turn on
+		@(posedge clk);	//without enable signal.
+		@(posedge clk);
+		#5 enable = 1'b1;
+		@(posedge clk);
+		#5 enable = 1'b0; //Need at least 24 cycles to test if "1-second" has passed.
+
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+
+		#5 test_s = 1'b1; //Should have observed a 1 by now.
+
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+		@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);@(posedge clk);
+
+		#5 test_s = 1'b0; //Another 1. 
+	end		
+
+endmodule

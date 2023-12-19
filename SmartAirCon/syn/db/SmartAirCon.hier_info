@@ -1,0 +1,7 @@
+|SmartAirCon
+enable => turnOn.IN1
+tempHigh => turnOn.IN0
+personPresent => turnOn.IN1
+turnOn << turnOn.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,85 @@
+module DigitTimer(clk, reset, tick, reconfig, res_from_up, req_from_bottom, digit, req_to_up, res_to_bottom, difficulty, isTens);
+
+    input clk;
+    input reset;
+    input tick;
+    input reconfig;
+    input res_from_up;
+    input req_from_bottom;
+	input isTens;
+	input [3:0] difficulty;
+    output reg [3:0] digit;
+    output reg req_to_up;
+    output reg res_to_bottom;
+
+	reg [3:0] value;
+	initial begin
+	    digit <= 4'b1001;
+	    req_to_up <= 1'b0;
+	    res_to_bottom <= 1'b1;
+	end
+    always@(posedge clk) begin
+	if(reset == 1'b0) begin
+	    digit <= 4'b1001;
+	    req_to_up <= 1'b0;
+	    res_to_bottom <= 1'b1;
+	end
+	
+	else begin
+	    req_to_up <= 1'b0;
+
+	    if(reconfig == 1'b1) begin
+		if(difficulty == 4'b0000) begin
+			// Level 1: 99 seconds
+			if(isTens == 1'b1) begin
+				digit <= 4'b1001;
+			end
+			else begin	
+				digit <= 4'b1001;
+			end
+		end
+		else if(difficulty == 4'b0001) begin
+			// Level 2: 60 seconds
+			if(isTens == 1'b1) begin
+				digit <= 4'b0110;
+			end
+			else begin	
+				digit <= 4'b0000;
+			end
+		end
+		else if(difficulty == 4'b0010) begin
+			// Level 3: 45 seconds
+			if(isTens == 1'b1) begin
+				digit <= 4'b0100;
+			end
+			else begin	
+				digit <= 4'b0101;
+			end
+		end
+  	        //res_to_bottom <= 1'b1;
+	    end
+	    else if(res_from_up == 1'b1 && req_to_up == 1'b1) begin
+		digit <= 4'b1001;
+  	        res_to_bottom <= 1'b1;
+	    end
+	    else if(res_from_up == 1'b0 && digit == 4'b0000) begin
+		res_to_bottom <= 1'b0;//timeout
+	    end
+	    else if(req_from_bottom == 1'b1 && digit > 4'b0000) begin
+		digit <= digit - 1'b1;
+            end
+
+            //Note that tick will be always 1'b0 in the tens digit timer.
+	    else if(tick == 1'b1) begin
+		digit <= digit - 1'b1;
+		if(digit == 4'b0000) begin
+		    req_to_up <= 1'b1;
+                    //res_to_bottom <= 1'b0;
+		    digit <= 4'b0000;
+		end
+	    end
+
+	end
+    end
+endmodule
+

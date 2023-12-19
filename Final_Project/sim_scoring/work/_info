@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ADD_Demos/Lab4_ZHANG_David/sim_AccessControllerSplit
+vRAM_PSWD
+!s110 1682972108
+!i10b 1
+!s100 >Dk?62[0HCOClKIS5HKhI0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ib23D=:Bl3oDGo[6Z^nC6?1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Final_Project/sim
+w1680828879
+8D:/ADD_Demos/Final_Project/src/RAM_PSWD.v
+FD:/ADD_Demos/Final_Project/src/RAM_PSWD.v
+!i122 26
+L0 40 71
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1682972108.000000
+!s107 D:/ADD_Demos/Final_Project/src/RAM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/src/RAM_PSWD.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@r@a@m_@p@s@w@d
+vRAM_Scoring
+!s110 1683231302
+!i10b 1
+!s100 5EjSkEh;HTAlR=]8I2XlN1
+R0
+IOoiCS_d@k:Hn7T4DdJ?aK1
+R1
+R2
+w1683230884
+8D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v
+FD:/ADD_Demos/Final_Project/syn/RAM_Scoring.v
+!i122 34
+L0 40 65
+R3
+r1
+!s85 0
+31
+!s108 1683231298.000000
+!s107 D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/syn/RAM_Scoring.v|
+!i113 1
+R4
+R5
+n@r@a@m_@scoring
+vScoring
+!s110 1683231352
+!i10b 1
+!s100 3UAVB=EXJh2R[GH`?lnek1
+R0
+IBDmc`b_dcblK`cz0iRghZ2
+R1
+R2
+w1683231347
+8D:/ADD_Demos/Final_Project/sim/Scoring.v
+FD:/ADD_Demos/Final_Project/sim/Scoring.v
+!i122 36
+L0 10 140
+R3
+r1
+!s85 0
+31
+!s108 1683231352.000000
+!s107 D:/ADD_Demos/Final_Project/sim/Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim/Scoring.v|
+!i113 1
+R4
+R5
+n@scoring
+vtb_Scoring
+!s110 1683231604
+!i10b 1
+!s100 ;gPLQaKAPcjclM58PDHzn3
+R0
+ILZnnfE7bLlEOFWJ]TVG:a1
+R1
+R2
+w1683231591
+8D:/ADD_Demos/Final_Project/sim/tb_Scoring.v
+FD:/ADD_Demos/Final_Project/sim/tb_Scoring.v
+!i122 39
+L0 7 39
+R3
+r1
+!s85 0
+31
+!s108 1683231604.000000
+!s107 D:/ADD_Demos/Final_Project/sim/tb_Scoring.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Final_Project/sim/tb_Scoring.v|
+!i113 1
+R4
+R5
+ntb_@scoring

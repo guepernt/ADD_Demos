@@ -1,0 +1,84 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/WINDOWS/system32
+vSmartAirCon
+Z0 !s110 1674462590
+!i10b 1
+!s100 gBPUahTUOGXP1anO:F:zk2
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IoP`<37dacg2]m^>AaPmI<0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/SmartAirCon/sim
+w1674462587
+8D:/ADD_Demos/SmartAirCon/sim/SmartAirCon.v
+FD:/ADD_Demos/SmartAirCon/sim/SmartAirCon.v
+!i122 0
+L0 1 10
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1674462590.000000
+!s107 D:/ADD_Demos/SmartAirCon/sim/SmartAirCon.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/SmartAirCon/sim/SmartAirCon.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@smart@air@con
+vtb_SmartAirCon
+R0
+R1
+r1
+!s85 0
+!i10b 1
+!s100 B=PV@@4z@3T_mjZ6JBZ>l1
+IN=[bB2>Sga@=E@H5WIAVa1
+R2
+Z7 w1674462586
+Z8 8D:/ADD_Demos/SmartAirCon/sim/tb_SmartAirCon.v
+Z9 FD:/ADD_Demos/SmartAirCon/sim/tb_SmartAirCon.v
+!i122 1
+L0 2 21
+R3
+31
+R4
+!s107 D:/ADD_Demos/SmartAirCon/sim/tb_SmartAirCon.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/SmartAirCon/sim/tb_SmartAirCon.v|
+!i113 1
+R5
+R6
+ntb_@smart@air@con
+Xtb_SmartAirCon_v_unit
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+V>8A=KJg1V?M5iAgC?_VIL0
+r1
+!s85 0
+!i10b 1
+!s100 PcDbFWj_BZV7kUhM[JIlf3
+I>8A=KJg1V?M5iAgC?_VIL0
+!i103 1
+S1
+R2
+R7
+R8
+R9
+!i122 1
+L0 1 0
+R3
+31
+R4
+Z11 !s107 D:/ADD_Demos/SmartAirCon/sim/tb_SmartAirCon.v|
+R10
+!i113 1
+R5
+R6
+ntb_@smart@air@con_v_unit

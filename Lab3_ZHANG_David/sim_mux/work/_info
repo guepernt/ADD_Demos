@@ -1,0 +1,298 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/20.1
+vAccessController
+!s110 1678308979
+!i10b 1
+!s100 gYb=>P`9?kY]i08Q1ii0C3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I49HF>7EmkheUY4FM>X=Ca2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/ADD_Demos/Lab3_ZHANG_David/sim_mux
+w1678308975
+8D:/ADD_Demos/Lab3_ZHANG_David/syn/AccessController.v
+FD:/ADD_Demos/Lab3_ZHANG_David/syn/AccessController.v
+!i122 13
+L0 9 140
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1678308979.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/syn/AccessController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/syn/AccessController.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@access@controller
+vAdder4Bit
+Z6 !s110 1678308468
+!i10b 1
+!s100 G37nClSI39E57ZeP;Qa2E3
+R0
+ICo8<2e7b6E?V^ld0GS4h`2
+R1
+R2
+w1675236733
+8D:/ADD_Demos/Lab3_ZHANG_David/src/Adder4Bit.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/Adder4Bit.v
+!i122 5
+L0 1 13
+R3
+r1
+!s85 0
+31
+Z7 !s108 1678308468.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/Adder4Bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/Adder4Bit.v|
+!i113 1
+R4
+R5
+n@adder4@bit
+vButtonShaper
+R6
+!i10b 1
+!s100 ;Y3VadH[8^VP21;HjKYSh0
+R0
+I2FL7W6?HAj^lUOjdPRSao3
+R1
+R2
+w1676620259
+8D:/ADD_Demos/Lab3_ZHANG_David/src/ButtonShaper.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/ButtonShaper.v
+!i122 6
+L0 1 46
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/ButtonShaper.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/ButtonShaper.v|
+!i113 1
+R4
+R5
+n@button@shaper
+vcountTo10
+Z8 !s110 1678308467
+!i10b 1
+!s100 H;YQ[gW:ONK=7dT18HYG]1
+R0
+IiUIOF6liP<ZiEMZ2=613Z1
+R1
+R2
+w1678261894
+8D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo10.v
+FD:/ADD_Demos/Lab3_ZHANG_David/syn/countTo10.v
+!i122 2
+L0 9 47
+R3
+r1
+!s85 0
+31
+Z9 !s108 1678308467.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo10.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo10.v|
+!i113 1
+R4
+R5
+ncount@to10
+vcountTo100
+R8
+!i10b 1
+!s100 6jNYZFIWbPVDmF07KNQCa1
+R0
+I9[o8I?hfz]PdZN3:1zNM<1
+R1
+R2
+w1678261907
+8D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo100.v
+FD:/ADD_Demos/Lab3_ZHANG_David/syn/countTo100.v
+!i122 3
+Z10 L0 9 54
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo100.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/syn/countTo100.v|
+!i113 1
+R4
+R5
+ncount@to100
+vDecoder7Seg
+R6
+!i10b 1
+!s100 1J0:RAf]Qj4gGBC>HnTL30
+R0
+Ii0h:?PL3ch8;K@:6<XgeX2
+R1
+R2
+w1675485757
+8D:/ADD_Demos/Lab3_ZHANG_David/src/Decoder7Seg.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/Decoder7Seg.v
+!i122 7
+L0 1 26
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/Decoder7Seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/Decoder7Seg.v|
+!i113 1
+R4
+R5
+n@decoder7@seg
+vdigitTimer
+R6
+!i10b 1
+!s100 k^Ci3ROg[Aee>J<[8::mN3
+R0
+IJc@HT;H3oY6j6?:@i]Ji[2
+R1
+R2
+w1678258305
+8D:/ADD_Demos/Lab3_ZHANG_David/src/digitTimer.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/digitTimer.v
+!i122 8
+L0 10 45
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/digitTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/digitTimer.v|
+!i113 1
+R4
+R5
+ndigit@timer
+vLab2_ZHANG_David
+!s110 1678311570
+!i10b 1
+!s100 6BOF`7X<HzSQ5V^jEZ[:k1
+R0
+IdkSLS3k;fjk7lI3f5mT221
+R1
+R2
+w1678311539
+8D:/ADD_Demos/Lab3_ZHANG_David/syn/Lab3_ZHANG_David.v
+FD:/ADD_Demos/Lab3_ZHANG_David/syn/Lab3_ZHANG_David.v
+!i122 14
+L0 9 72
+R3
+r1
+!s85 0
+31
+!s108 1678311570.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/syn/Lab3_ZHANG_David.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/syn/Lab3_ZHANG_David.v|
+!i113 1
+R4
+R5
+n@lab2_@z@h@a@n@g_@david
+vLoadRegister
+R6
+!i10b 1
+!s100 XZ;A;lA9a@h4zH^nlE9zb2
+R0
+IGPebF?n_T5A6>BD:GNS<S0
+R1
+R2
+w1676618552
+8D:/ADD_Demos/Lab3_ZHANG_David/src/LoadRegister.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/LoadRegister.v
+!i122 9
+L0 1 25
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/LoadRegister.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/LoadRegister.v|
+!i113 1
+R4
+R5
+n@load@register
+vmux_2to1
+!s110 1678308838
+!i10b 1
+!s100 [k]61n31h<U3]^?==Ln3b0
+R0
+IW@lAVQF^Si1?Xg:kSj53L2
+R1
+R2
+w1678308832
+8D:/ADD_Demos/Lab3_ZHANG_David/sim_mux/mux_2to1.v
+FD:/ADD_Demos/Lab3_ZHANG_David/sim_mux/mux_2to1.v
+!i122 12
+L0 9 15
+R3
+r1
+!s85 0
+31
+!s108 1678308838.000000
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/sim_mux/mux_2to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/sim_mux/mux_2to1.v|
+!i113 1
+R4
+R5
+voneSecondTimer
+R8
+!i10b 1
+!s100 g5Gmh92VL8HlamO:Ml<932
+R0
+IE@GDGPV^C^Sd=ooG^TN=R2
+R1
+R2
+w1678261921
+8D:/ADD_Demos/Lab3_ZHANG_David/syn/1secTimer.v
+FD:/ADD_Demos/Lab3_ZHANG_David/syn/1secTimer.v
+!i122 0
+R10
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/syn/1secTimer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/syn/1secTimer.v|
+!i113 1
+R4
+R5
+none@second@timer
+vRNG
+R6
+!i10b 1
+!s100 Vlkz<H>]NHz@b`FMdeI0o1
+R0
+IAGiCf`>7C9m9UDP2IZcfl2
+R1
+R2
+w1677658913
+8D:/ADD_Demos/Lab3_ZHANG_David/src/RNG.v
+FD:/ADD_Demos/Lab3_ZHANG_David/src/RNG.v
+!i122 10
+L0 10 15
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/ADD_Demos/Lab3_ZHANG_David/src/RNG.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/ADD_Demos/Lab3_ZHANG_David/src/RNG.v|
+!i113 1
+R4
+R5
+n@r@n@g

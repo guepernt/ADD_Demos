@@ -1,0 +1,55 @@
+//ECE 6370
+//David Zhang, 2213233
+
+//This module counts to 10 based on the clk input. It is part of a nested loop that counts to a total
+//of 50,000,000, at which point it will determine that 1 second has passed.
+
+//For simulation purposes, this module will be set to a count of 2. After simulation, the number
+//should be set back to 4'b1010, minus 1.
+module countTo10(clk, rst, enable, counter_out);
+	input clk, enable, rst;
+	output counter_out;
+	reg counter_out;
+
+	reg [3:0] rollingCounter;
+	parameter OFF = 0, ON = 1;
+	reg State;
+
+	always @(posedge clk) begin
+		if(rst == 1'b0) begin
+			rollingCounter <= 4'b0000;
+			counter_out <= 1'b0;
+			State <= OFF;
+		end
+		else
+			case (State) 
+				OFF: begin
+					rollingCounter <= 0;
+					counter_out <= 0;
+					if (enable == 1'b1) begin
+						State <= ON;
+					end
+				end
+
+				ON: begin
+					if (enable == 1'b0) begin
+						if (rollingCounter == 4'b1001) begin	//Set back after simulation
+							counter_out <= 1'b1;
+							rollingCounter <= 4'b0000;
+						end
+						else begin
+							counter_out <= 1'b0;
+							rollingCounter <= rollingCounter + 1'b1;
+						end
+					end
+					else begin
+						State <= OFF;
+					end
+				end
+		
+				default: begin
+					State <= OFF;
+				end
+			endcase
+	end		
+endmodule
